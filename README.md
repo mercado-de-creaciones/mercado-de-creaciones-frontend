@@ -49,30 +49,23 @@ Esta _App Web_ es una **Single Page Application(_SPA_)** o **Aplicación de una 
 
 ## Estructura de carpetas y archivos:
 
-| Carpeta / Archivo       | Funcionalidad                                                                                                                                             |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/app`                  | Contiene todos los archivos importantes de la aplicación                                                                                                  |
-| `/app/assets`           | Contiene todos los recursos estáticos como _imágenes_, _SVG_, _videos_, etc.                                                                              |
-| `/app/components`       | Contiene todos los componentes _Javascript_ de la app.                                                                                                    |
-| `/components/Router.js` | Maneja la lógica al cambiar el _hash_ de la url.                                                                                                          |
-| `/app/helpers`          | Contiene todas las _funciones reutilizables_ de ayuda y _constantes_ que se usan en la app.                                                               |
-| `/build`                | Contiene todo el código _CSS_ compilado por _SASS_.                                                                                                       |
-| `/node_modules`         | Carpeta que guarda las dependecias instaladas con _NPM_.                                                                                                  |
-| `/scss`                 | Contiene todo los archivos _SASS_ de la app.                                                                                                              |
-| `/scss/base`            | Contiene los módulos de _SASS_ que establecen los estilos globales como definir las _variables_, los _mixins_ reutilizables, normalizar los estilos, etc. |
-| `/scss/ui`              | Contiene los módulos de _SASS_ que estilizan los _componentes_ de la app.                                                                                 |
-| `/scss/app.scss`        | Archivo de _SASS_ que se encarga de importar todos los módulos de SASS de la app.                                                                         |
-| `.gitignore`            | Establece carpetas o archivos que son de desarrollo y no tendrán seguimiento con _Git_.                                                                   |
-| `App.js`                | Se encarga de renderizar los _componentes_ de la app y el _Router_.                                                                                       |
-| `index.html`            | Único archivo _HTML_ donde carga todo el contenido de una vez con todos los recursos                                                                      |
-| `index.js`              | Archivo se se encarga de renderizar el contenido de la _SPA_ de una sola vez y cada vez que cambia el _hash_ de la url.                                   |
-| `package.json`          | Archivo de configuración de dependencias de _NodeJS_.                                                                                                     |
-
-## Sección de Preguntas Frecuentes _(FAQ)_
-
-### ¿Cuál es la versión mínima de Node.js compatible con esta aplicación?
-
-La versión mínima compatible de Node.js es [20.11.1 LTS](https://nodejs.org/en)
+| Carpeta / Archivo | Funcionalidad                                                                                                                                                                                                                                                                                                                             |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/app`            | Contiene todos los archivos importantes de la aplicación.                                                                                                                                                                                                                                                                                 |
+| `/app/assets`     | Contiene todos los recursos estáticos como _imágenes_, _SVG_, _videos_, etc.                                                                                                                                                                                                                                                              |
+| `/app/components` | Contiene todos los componentes _Javascript_ de la app.                                                                                                                                                                                                                                                                                    |
+| `/app/pages`      | Contiene todas las paginas de la app.                                                                                                                                                                                                                                                                                                     |
+| `/app/helpers`    | Contiene todas las _funciones reutilizables_ de ayuda en nuestra lógica y _constantes_ que se usan en la app(ej. formatear una fecha, formatear numero a peso de venta,funcion para peticiones http, etc). Se recomienda los archivos helpers con la siguiente nomenclatura: `archivoHelper.js`. Por ejemplo puede ser `formatsHelper.js` |
+| `/app/functions`  | Contiene todas las funciones que tendran la logica de las funcionalidades de nuestra página(ej. logica del carrito, ,menu hamburguesa, etc).                                                                                                                                                                                              |
+| `/app/Router.js`  | Maneja la lógica al cambiar el _hash_ de la url y carga la data de APIs, archivos persistentes, etc (En nuestro caso controla la carga de la pagina de incio, tienda,sobre mí, contacto, etc).                                                                                                                                            |
+| `App.js`          | Se encarga de renderizar los _componentes_ de la app y tambien el _Router_.                                                                                                                                                                                                                                                               |
+| `index.html`      | Único archivo _HTML_ donde carga todo el contenido de una vez con todos los recursos y el JS                                                                                                                                                                                                                                              |
+| `index.js`        | Archivo que se encarga de renderizar el contenido de la _SPA_ de una sola vez y cada vez que cambia el _hash_ de la url.                                                                                                                                                                                                                  |
+| `db.json`         | JSON de **JSON server** que tendrá toda la data de productos, entre otros y creará nuestros _endpoints_.                                                                                                                                                                                                                                  |
+| `/node_modules`   | Carpeta que guarda las dependecias instaladas con _NPM_.                                                                                                                                                                                                                                                                                  |
+| `package.json`    | Archivo de configuración de dependencias de _NodeJS_.                                                                                                                                                                                                                                                                                     |
+| `.gitignore`      | Establece carpetas o archivos que son de desarrollo y no tendrán seguimiento con _Git_.                                                                                                                                                                                                                                                   |
+|  |
 
 ---
 
