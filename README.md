@@ -34,21 +34,22 @@ Esta _App Web_ es una **Single Page Application(_SPA_)** o **Aplicación de una 
 
 ## Estructura de carpetas y archivos:
 
-| Carpeta / Archivo               | Descripción |
-| ------------------------------- | ----------- |
-| `/src`                          |             |
-| `/src/config`                   |             |
-| `/src/config/adapter`           |             |
-| `/src/config/helpers`           |             |
-| `/src/core`                     |             |
-| `/src/core/entities`            |             |
-| `/src/core/use-cases`           |             |
-| `/src/infrastructure`           |             |
-| `/src/infrastructure/entities`  |             |
-| `/src/infrastructure/use-cases` |             |
-| `/src/presentation`             |             |
-| `/src/presentation/pages`       |             |
-| `/src/presentation/routes`      |             |
-| `/src/presentation/hooks`       |             |
-| `/src/presentation/assets`      |             |
-| `/src/presentation/components`  |             |
+| Carpeta / Archivo                | Descripción |
+| -------------------------------- | ----------- |
+| `/src`                           |             |
+| `/src/config`                    |             |
+| `/src/config/adapter`            |             |
+| `/src/config/helpers`            |             |
+| `/src/core`                      |             |
+| `/src/core/entities`             |             |
+| `/src/core/use-cases`            |             |
+| `/src/infrastructure`            |             |
+| `/src/infrastructure/interfaces` |             |
+| `/src/infrastructure/mappers`    |             |
+| `/src/presentation`              |             |
+| `/src/presentation/pages`        |             |
+| `/src/presentation/routes`       |             |
+| `/src/presentation/hooks`        |             |
+| `/src/presentation/assets`       |             |
+| `/src/presentation/components`   |             |
+| `/test`                          |             |
