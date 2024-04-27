@@ -34,22 +34,21 @@ Esta _App Web_ es una **Single Page Application(_SPA_)** o **Aplicación de una 
 
 ## Estructura de carpetas y archivos:
 
-| Carpeta / Archivo               | Funcionalidad                                                                                                                                                                                                                                                                                                                             |
-| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/src`                          | Contiene todos los archivos importantes de la aplicación.                                                                                                                                                                                                                                                                                 |
-| `/src/config`                   | Contiene todos los recursos estáticos como _imágenes_, _SVG_, _videos_, etc.                                                                                                                                                                                                                                                              |
-| `/src/config/adapter`           | Contiene todos los recursos estáticos como _imágenes_, _SVG_, _videos_, etc.                                                                                                                                                                                                                                                              |
-| `/src/config/helpers`           | Contiene todos los recursos estáticos como _imágenes_, _SVG_, _videos_, etc.                                                                                                                                                                                                                                                              |
-| `/src/core`                     | Contiene todos los recursos estáticos como _imágenes_, _SVG_, _videos_, etc.                                                                                                                                                                                                                                                              |
-| `/src/core/entities`            | Contiene todos los recursos estáticos como _imágenes_, _SVG_, _videos_, etc.                                                                                                                                                                                                                                                              |
-| `/src/core/use-cases`           | Contiene todos los recursos estáticos como _imágenes_, _SVG_, _videos_, etc.                                                                                                                                                                                                                                                              |
-| `/src/infrastructure`           | Contiene todos los recursos estáticos como _imágenes_, _SVG_, _videos_, etc.                                                                                                                                                                                                                                                              |
-| `/src/infrastructure/use-cases` | Contiene todos los recursos estáticos como _imágenes_, _SVG_, _videos_, etc.                                                                                                                                                                                                                                                              |
-| `/src/infrastructure/use-cases` | Contiene todos los recursos estáticos como _imágenes_, _SVG_, _videos_, etc.                                                                                                                                                                                                                                                              |
-| `/src/presentation`             | Contiene todos los componentes _TypeScript_ de la app.                                                                                                                                                                                                                                                                                    |
-| `/src/presentation/pages`       | Contiene todas las paginas de la app.                                                                                                                                                                                                                                                                                                     |
-| `/src/presentation/helpers`     | Contiene todas las _funciones reutilizables_ de ayuda en nuestra lógica y _constantes_ que se usan en la app(ej. formatear una fecha, formatear numero a peso de venta,funcion para peticiones http, etc). Se recomienda los archivos helpers con la siguiente nomenclatura: `archivoHelper.ts`. Por ejemplo puede ser `formatsHelper.ts` |
-| `/src/presentation/routes`      | Contiene todas las funciones que tendran la logica de las funcionalidades de nuestra página.                                                                                                                                                                                                                                              |
-| `/src/presentation/hooks`       | Contiene todas las funciones que tendran la logica de las funcionalidades de nuestra página.                                                                                                                                                                                                                                              |
-| `/src/presentation/assets`      | Contiene todas las funciones que tendran la logica de las funcionalidades de nuestra página.                                                                                                                                                                                                                                              |
-| `/src/presentation/components`  | Contiene todas las funciones que tendran la logica de las funcionalidades de nuestra página.                                                                                                                                                                                                                                              |
+| Carpeta / Archivo               | Descripción |
+| ------------------------------- | ----------- |
+| `/src`                          |             |
+| `/src/config`                   |             |
+| `/src/config/adapter`           |             |
+| `/src/config/helpers`           |             |
+| `/src/core`                     |             |
+| `/src/core/entities`            |             |
+| `/src/core/use-cases`           |             |
+| `/src/infrastructure`           |             |
+| `/src/infrastructure/entities`  |             |
+| `/src/infrastructure/use-cases` |             |
+| `/src/presentation`             |             |
+| `/src/presentation/pages`       |             |
+| `/src/presentation/routes`      |             |
+| `/src/presentation/hooks`       |             |
+| `/src/presentation/assets`      |             |
+| `/src/presentation/components`  |             |
