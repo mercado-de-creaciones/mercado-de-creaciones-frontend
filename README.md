@@ -1,20 +1,22 @@
-# Mercado de creaciones _FrontEnd_ - Enfoque SPA
+# Mercado de creaciones _FrontEnd_
 
-## Diagrama de arquitectura
+## Diagrama de arquitectura limpia
 
-![SPA](https://jonmircha.com/img/blog/arquitectura-spa.png)
+![arquitectura-limpia](https://learn.microsoft.com/es-es/dotnet/architecture/modern-web-apps-azure/media/image5-8.png)
 
-## Tecnologías:
+## Tecnologías y Bibliotecas:
 
-Para el desarrollo de el _Frontend_ de esta _App Web_ se usaron las siguientes tecnologías:
+Para el desarrollo de el _Frontend_ de esta _App Web_ se usaron las siguientes tecnologías y bibliotecas:
 
 - **_HTML:_** Lenguaje de etiquetas para estructurar la app de manera semántica.
 - **_Tailwind CSS:_** Framework CSS para aplicar estilos y Responsive Web Design con enfoque Mobile First.
+- **_React:_** : Biblioteca JavaScript para interfaces de usuario interactivas y reutilizables.
+- **_React Query:_**: Biblioteca para gestionar y sincronizar datos de forma eficiente en aplicaciones React.
 - **_TypeScript:_** Agrega tipado estático a la aplicación para mayor robustez.
 - **_NPM:_** Gestor de dependencias de Node.js para instalar librerías en TypeScript.
 - **_Figma:_** Herramienta para diseñar y prototipar la interfaz de usuario.
 - **_Git:_** Sistema de control de versiones para una colaboración efectiva.
-- **_Jest:_** Framework de pruebas JavaScript.
+- **_Vitest:_** Framework de pruebas JavaScript.
 
 ---
 
@@ -28,31 +30,26 @@ Utilizamos Netlify para alojar nuestra aplicación. Ofrece un proceso de impleme
 
 ## ¿Que enfoque usa esta _App Web_?
 
-Esta _App Web_ es una **Single Page Application(_SPA_)** o **Aplicación de una Sola Página**.
-
-### ¿Por qué esta web es una **_SPA_**?
-
-- Porque todo el contenido carga de una sola vez, es decir, el navegador descarga solo un archivo _HTML_ con todos los recursos haciendo que la navegación sea más rápida y fluida.
-- Porque carga contenido de forma dinámica sin necesidad de recargar la página usando **_AJAX_**.
-- Porque mediante una _API_ conecta el _Frontend_ con el _Backend_, y este último mencionado es independiente a la _SPA_ importando poco en que lenguaje esté programado o que patrones use.
-- Porque el _Frontend_, _Backend_ y la _persistencia de datos_ estan desacoplados y descentralizados de sí mismos.
-
----
+Esta _App Web_ es una **Single Page Application(_SPA_)** o **Aplicación de una Sola Página** que usa principios de arquitectura limpia.
 
 ## Estructura de carpetas y archivos:
 
-| Carpeta / Archivo    | Funcionalidad                                                                                                                                                                                                                                                                                                                             |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/app`               | Contiene todos los archivos importantes de la aplicación.                                                                                                                                                                                                                                                                                 |
-| `/app/assets`        | Contiene todos los recursos estáticos como _imágenes_, _SVG_, _videos_, etc.                                                                                                                                                                                                                                                              |
-| `/app/components`    | Contiene todos los componentes _TypeScript_ de la app.                                                                                                                                                                                                                                                                                    |
-| `/app/pages`         | Contiene todas las paginas de la app.                                                                                                                                                                                                                                                                                                     |
-| `/app/helpers`       | Contiene todas las _funciones reutilizables_ de ayuda en nuestra lógica y _constantes_ que se usan en la app(ej. formatear una fecha, formatear numero a peso de venta,funcion para peticiones http, etc). Se recomienda los archivos helpers con la siguiente nomenclatura: `archivoHelper.ts`. Por ejemplo puede ser `formatsHelper.ts` |
-| `/app/functions`     | Contiene todas las funciones que tendran la logica de las funcionalidades de nuestra página.                                                                                                                                                                                                                                              |
-| `/app/Router.ts`     | Maneja la lógica al cambiar el _hash_ de la url y carga la data de APIs, archivos persistentes.                                                                                                                                                                                                                                           |
-| `/tests`             | Contiene archivos de pruebas unitarias e integración para asegurar la funcionalidad y calidad del código.                                                                                                                                                                                                                                                    |
-| `App.ts`             | Se encarga de renderizar los _componentes_ de la app y tambien el _Router_.                                                                                                                                                                                                                                                               |
-| `index.html`         | Único archivo _HTML_ donde carga todo el contenido de una vez con todos los recursos y el JS                                                                                                                                                                                                                                              |
-| `index.ts`           | Archivo que se encarga de renderizar el contenido de la _SPA_ de una sola vez y cada vez que cambia el _hash_ de la url.                                                                                                                                                                                                                  |
-| `Tailwind.config.ts` | El archivo "tailwind.config.js" personaliza las opciones de Tailwind CSS, como colores, fuentes y márgenes, para adaptarse a las necesidades del proyecto.                                                                                                                                                                                | \_. |
-| `package.json`       | Archivo de configuración de dependencias de _NodeJS_. ##                                                                                                                                                                                                                                                                                  |
+| Carpeta                          | Descripción | Formato para nombrar archivo | 
+| -------------------------------- | ----------- | ------------------- |
+| `/src`                           | Contiene toda el código de la app para producción(casos de uso, UI, configuraciones, etc) |  N/A |
+| `/config`                        | Contiene archivos de configuración global para nuestra app(configuraciones de __APIs__, adaptadores, helpers, etc)  | N/A  |
+| `/config/adapter`                | Contiene adaptadores que son piezas de código de librerías externas que adapta funcionalidades para que sean flexibles al cambio | `/nombre-contexto/nombre-modulo.adapter.ts` |
+| `/config/helpers`                | Contiene funciones que realizan tareas comunes y que pueden ser reutilizadas(por ejemplo, formatear fechas, montos, calculos, etc)  | `nombre-descriptivo.ts` |
+| `/core`                          | Contiene la lógica de negocio de nuestra app, como las entidades y casos de uso (esta lógica es independiente a cualquier framework frontend) | N/A |
+| `/core/entities`                 | Contiene las _"entidades"_ de nuestra app (objeto que contiene la lógica de negocio o datos que usaremos) | `nombreentidad.entity.ts` |
+| `/core/use-cases`                | Contiene los _"casos de uso"_ de nuestra app(un caso de uso es una operación específica que un usuario puede realizar. Ejemplo:  _"Iniciar sesión", "Registrarse", "Crear producto", etc_) | `/nombre-modulo/nombre-caso-uso.use-case.ts` |
+| `/infrastructure`                | Es responsable de implementar los detalles de cómo nuestra app interactúa con las __APIs__, etc. | N/A |
+| `/infrastructure/interfaces`     | Contiene las interfaces que definen cómo nuestra app interactúa con los sistemas externos (__APIs__, etc) | `nombre-descriptivo.response.ts`  |
+| `/infrastructure/mappers`        | Son piezas de código que convierten datos de un formato a otro. | `nombreentidad.mapper.ts` |
+| `/presentation`                  | Contiene código relacionado con la interfaz de usuario de nuestra aplicación. | N/A |
+| `/presentation/components`       | Contiene  los componentes de React que se utilizan en nuestra aplicación. | `nombre-descriptivo/NombreComponente.tsx` |
+| `/presentation/hooks`            | Contiene los hooks personalizados de React que se utilizan en nuestra aplicación. | `modulo/useNombreHook.tsx` |
+| `/presentation/layouts`          | Contiene componentes de diseño de páginas que encapsulan la estructura general de una página. | `NombreLayout.tsx` |
+| `/presentation/pages`            | Contiene los componentes de página(corresponden a una ruta o pantalla en nuestra app). |  `nombre-descriptivo/NombrePagina.tsx` |
+| `/presentation/store`            | Contiene el código relacionado con la gestión del estado de nuestra app(usando Zustand). | `nombre-descriptivo-store.ts` |
+| `/src/tests`                     | Aquí se definiran los archivos de prueba |  **_Dentro debe seguir la estructura de carpetas de `/src` y los archivos se definen así:_** `archivo.test.tsx` |
