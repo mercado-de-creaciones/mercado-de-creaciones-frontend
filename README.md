@@ -2,21 +2,25 @@
 
 ## Diagrama de arquitectura limpia
 
-![arquitectura-limpia](https://learn.microsoft.com/es-es/dotnet/architecture/modern-web-apps-azure/media/image5-8.png)
+![arquitectura-limpia](https://miro.medium.com/v2/resize:fit:1200/1*A_rg9nq0W01o0X8SnNZpFQ.png)
 
 ## Tecnologías y Bibliotecas:
 
-Para el desarrollo de el _Frontend_ de esta _App Web_ se usaron las siguientes tecnologías y bibliotecas:
+Para el desarrollo _Frontend_ de esta _App Web_ se usaron las siguientes tecnologías y bibliotecas:
 
-- **_HTML:_** Lenguaje de etiquetas para estructurar la app de manera semántica.
-- **_Tailwind CSS:_** Framework CSS para aplicar estilos y Responsive Web Design con enfoque Mobile First.
-- **_React:_** : Biblioteca JavaScript para interfaces de usuario interactivas y reutilizables.
-- **_React Query:_**: Biblioteca para gestionar y sincronizar datos de forma eficiente en aplicaciones React.
-- **_TypeScript:_** Agrega tipado estático a la aplicación para mayor robustez.
-- **_NPM:_** Gestor de dependencias de Node.js para instalar librerías en TypeScript.
-- **_Figma:_** Herramienta para diseñar y prototipar la interfaz de usuario.
-- **_Git:_** Sistema de control de versiones para una colaboración efectiva.
-- **_Vitest:_** Framework de pruebas JavaScript.
+- **_HTML_**
+- **_CSS_**
+- **_Javascript_**
+- **_Shadcn/UI_**
+- **_Tailwind CSS_**
+- **_React_**
+- **_TypeScript_**
+- **_Git_** 
+- **_Vitest_**
+- **_Netlify_**
+
+![Tecnologias](https://skillicons.dev/icons?i=html,css,js,tailwind,react,vite,ts,vitest,git,github,npm,netlify)
+
 
 ---
 
