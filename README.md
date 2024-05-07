@@ -1,6 +1,7 @@
 # Mercado de creaciones _FrontEnd_
 
 ## Diagrama de arquitectura limpia
+Esta app see desarrollará bajo una arquitectura limpia incompleta, ya que no usaremos los _Datasources_ y el patrón _Repository_. Sin embargo, se usarán buenas prácticas de _Clean code_ y principios _SOLID_ que permitirá la mantibilidad y escalabilidas de la aplicación.
 
 ![arquitectura-limpia](https://miro.medium.com/v2/resize:fit:1200/1*A_rg9nq0W01o0X8SnNZpFQ.png)
 
