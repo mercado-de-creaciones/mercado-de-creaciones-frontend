@@ -1,16 +1,13 @@
-import { ReactNode } from "react";
+import { cn } from '@/presentation/lib/utils';
 
 interface Props {
-    text: string,
-    className?: string,
-    children?: ReactNode 
+	children: React.ReactNode;
+	className?: string;
 }
 
-export function TypographyH1(props: Props) {
-    const { text, className, children } = props;
+export function TypographyH1({ children, className }: Props) {
     return (
-        <h1 className={`scroll-m-20 text-4xl tracking-tight lg:text-5xl ${className}`}>
-            {text}
+        <h1 className={cn('scroll-m-20 text-4xl tracking-tight lg:text-5xl', className)}>
             {children}
         </h1>
     )

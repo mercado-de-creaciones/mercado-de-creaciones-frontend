@@ -1,16 +1,12 @@
-import { ReactNode } from "react";
+import { cn } from '@/presentation/lib/utils';
 
 interface Props {
-    text: string,
-    className?: string,
-    children?: ReactNode 
+	children: React.ReactNode;
+	className?: string;
 }
-export function TypographyP(props: Props) {
-    const { text, className, children } = props;
-    return (
-        <p className={`leading-7 ${className} [&:not(:first-child)]:mt-6`}>
-            {text}
-            {children}
-        </p>
-    )
-}
+
+export const TypographyP = ({ children, className }: Props) => {
+	return (
+		<p className={cn('leading-7 text-[#202446]', className)}>{children}</p>
+	);
+};
