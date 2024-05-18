@@ -1,6 +1,5 @@
 import { TypographyH1 } from "@/presentation/components/shared/typography/typographyH1"
 import { TypographyH2 } from "@/presentation/components/shared/typography/typographyH2"
-import { TypographyH3 } from "@/presentation/components/shared/typography/typographyH3"
 import { TypographyH4 } from "@/presentation/components/shared/typography/typographyH4"
 import { TypographyP } from "@/presentation/components/shared/typography/typographyP"
 
@@ -30,44 +29,6 @@ export const Home = () => {
                 <div className="basis-1/4">
                     <TypographyH2 text="Explora el mundo de las mascotas y "><span className="text-home-100 font-semibold">encuentra inspiración en nuestras categorias</span> </TypographyH2>
                 </div>
-                <div>
-                    <Carousel>
-                        <CarouselContent>
-                            <CarouselItem className="xl:basis-1/3 md:basis-1/2">
-                                <Card>
-                                    <CardContent>
-                                        <p>Card Content</p>
-                                    </CardContent>
-                                </Card >
-                            </CarouselItem>
-                            <CarouselItem className="xl:basis-1/3 md:basis-1/2">
-                                <Card>
-                                    <CardContent>
-                                        <p>Card Content</p>
-                                    </CardContent>
-                                </Card >
-                            </CarouselItem>
-                            <CarouselItem className="xl:basis-1/3 md:basis-1/2">
-                                <Card>
-                                    <CardContent>
-                                        <p>Card Content</p>
-                                    </CardContent>
-                                </Card >
-                            </CarouselItem>
-                            <CarouselItem className="xl:basis-1/3 md:basis-1/2">
-                                <Card>
-                                    <CardContent>
-                                        <p>Card Content</p>
-                                    </CardContent>
-                                </Card >
-                            </CarouselItem>
-                        </CarouselContent>
-                        <CarouselPrevious />
-                        <CarouselNext />
-                    </Carousel>
-                </div>
-
-
             </div>
         </div>
     )
