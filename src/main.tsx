@@ -28,7 +28,7 @@ const router = createBrowserRouter([
         element: <Register />,
       },
       {
-        path: "olvide-password",
+        path: "/olvide-password",
         element: <ResetPassword />,
       },
       {
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
         element: <NewPassword />,
       },
       {
-        path: "confirmar/:id",
+        path: "/confirmar/:id",
         element: <ConfirmAccount />,
       },
     ],
