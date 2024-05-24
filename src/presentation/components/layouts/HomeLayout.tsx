@@ -1,9 +1,10 @@
 import { Outlet } from 'react-router-dom';
+import { Header } from '../home/Header';
 
 export const HomeLayout = () => {
     return (
         <div className='bg-home-50 h-fit'>
-            <header></header>
+            <Header />
             <main className="bg-home-50">
 					<Outlet />
             </main>

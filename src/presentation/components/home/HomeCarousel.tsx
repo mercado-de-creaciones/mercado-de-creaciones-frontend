@@ -7,6 +7,7 @@ import {
     CarouselPrevious,
 } from "@/presentation/components/ui/carousel"
 import carouselBg from '/carousel-background.png'
+import { CarouselCard } from "./CarouselCard"
 
 
 export const HomeCarousel = () => {
@@ -15,32 +16,19 @@ export const HomeCarousel = () => {
         <Carousel>
             <CarouselContent>
                 <CarouselItem className="xl:basis-1/2 md:basis-1/2">
-                    <Card>
-                        <CardContent>
-                            <p>Card Content</p>
-                        </CardContent>
-                    </Card >
+                <CarouselCard />
+
                 </CarouselItem>
                 <CarouselItem className="xl:basis-1/2 md:basis-1/2">
-                    <Card>
-                        <CardContent>
-                            <p>Card Content</p>
-                        </CardContent>
-                    </Card >
+                <CarouselCard />
+
                 </CarouselItem>
                 <CarouselItem className="xl:basis-1/2 md:basis-1/2">
-                    <Card>
-                        <CardContent>
-                            <p>Card Content</p>
-                        </CardContent>
-                    </Card >
+                <CarouselCard />
+
                 </CarouselItem>
                 <CarouselItem className="xl:basis-1/2 md:basis-1/2">
-                    <Card>
-                        <CardContent>
-                            <p>Card Content</p>
-                        </CardContent>
-                    </Card >
+                    <CarouselCard />
                 </CarouselItem>
             </CarouselContent>
             <CarouselPrevious />

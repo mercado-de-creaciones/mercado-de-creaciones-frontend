@@ -17,6 +17,9 @@ module.exports = {
       },
     },
     extend: {
+      aspectRatio: {
+        '7/12': '7 / 12',
+      },
       colors: {
         home: {
           50: "rgba(255, 245, 233, 1)",
