@@ -5,12 +5,12 @@ import { TypographyP } from "@/presentation/components/shared/typography/Typogra
 import home from '/home-image.png'
 import paws from '/home-paws.png'
 import { Button } from "@/presentation/components/ui/button"
-import { HomeCarousel } from "@/presentation/components/home/HomeCarousel"
+import { HomeCarousel } from "@/presentation/components/home/simpleCarousel/HomeCarousel"
 
 export const Home = () => {
     return (
-        <div className="sm:h-fit bg-home-50 xl:pl-50 md:px-24 px-8 z-0">
-            <div className="h-dvh w-full flex justify-evenly content-center items-center flex-wrap sm:flex-nowrap">
+        <div className="sm:h-fit bg-home-50 md:px-24 px-8 z-0">
+            <div className="h-dvh w-full flex justify-around content-center items-center flex-wrap sm:flex-nowrap">
                 <div className="lg:max-w-md md:max-w-sm max-w-72">
                     <div className="relative">
                     <TypographyH4 className="text-home-100 font-medium my-3" >Bienvenidos...</TypographyH4>
@@ -24,12 +24,12 @@ export const Home = () => {
                     <img src={home}/>
                 </div>
             </div>
-            <div className="h-dvh w-full flex justify-evenly content-center items-center flex-wrap sm:flex-nowrap">
-                <div className="basis-1/4">
-                    <TypographyH3 className="text-5xl font-bold leading-snug">Explora</TypographyH3>
-                    <TypographyH3 className="text-4xl font-medium">el mundo de las mascotas y <span className="text-home-100 font-semibold">encuentra inspiración en nuestras categorias</span> </TypographyH3>
+            <div className="h-dvh w-full flex justify-around content-center items-center flex-wrap sm:flex-nowrap gap-11">
+                <div className="lg:basis-1/4 md:basis-1/2">
+                    <TypographyH3 className="text-3xl lg:text-5xl font-bold leading-snug">Explora</TypographyH3>
+                    <TypographyH3 className="text-3xl lg:text-4xl font-medium ">el mundo de las mascotas y <span className="text-home-100 font-semibold">encuentra inspiración en nuestras categorias</span> </TypographyH3>
                 </div>
-                <div>
+                <div className="xl:basis-1/3 md:basis-1/2 md:max-w-60 lg:max-w-full">
                     <HomeCarousel />
                 </div>
             </div>
