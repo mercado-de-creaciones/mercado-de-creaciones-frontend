@@ -10,7 +10,7 @@ const AccordionTriggerCustom = ({title, isActiveAccordion, iconImg, iconArrow}: 
     <>
       <div className={`${isActiveAccordion ? "justify-center" : "justify-between" } flex w-full items-center`}>
         <div className={`${isActiveAccordion ? "w-[38px]" : "w-full"} duration-700 transition-all ease-in-out flex justify-center items-center`}>
-          <img src={iconImg} alt={`icon ${title}`}/>
+          <img className="" src={iconImg} alt={`icon ${title}`}/>
       
           <div className={`${isActiveAccordion ? "w-0 overflow-hidden": "w-full"} duration-700 transition-all ease-in-out`}>
             <div className={`w-full transition-transform duration-700 ease-in-out transform ${isActiveAccordion? '-translate-x-full scale-x-0' : 'translate-x-0 scale-x-100'}`}>

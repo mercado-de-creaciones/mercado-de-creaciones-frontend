@@ -10,7 +10,7 @@ import { ResetPassword } from './presentation/pages/auth/ResetPassword';
 import { NewPassword } from './presentation/pages/auth/NewPassword';
 import { ConfirmAccount } from './presentation/pages/auth/ConfirmAccount';
 import { AuthLayout } from './presentation/layouts/AuthLayout';
-import { Products } from './presentation/pages/auth/Products';
+import { Products } from './presentation/pages/product/Products';
 
 const queryClientProvider = new QueryClient();
 

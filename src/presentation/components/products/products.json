@@ -1,0 +1,119 @@
+[
+  {
+    "id": 1,
+    "description": "Sudadera con capucha para perros con bolsillo perros a cuadros para...",
+    "sizes": ["XS", "S", "M", "L", "X-L", "X-X-L"],
+    "starsNumber": 3.5,
+    "maxStar": 5,
+    "prize": 120,
+    "img": "https://www.fanaticosdelasmascotas.cl/wp-content/uploads/2021/03/perros_ropa1.jpg"
+  },
+  {
+    "id": 2,
+    "description": "Elegante collar de perro con incrustaciones de diamantes y detalles brillantes",
+    "sizes": ["S", "M", "L"],
+    "starsNumber": 4.0,
+    "maxStar": 5,
+    "prize": 45,
+    "img": "https://media.istockphoto.com/id/861194970/es/foto/yorkshire-con-una-camiseta-azul-desnudo-aislado-en-blanco.jpg?s=612x612&w=0&k=20&c=zM4xIdgEq6ezggkGZTPbKPVNRGaOwysKpkGKZud85N0="
+  },
+  {
+    "id": 3,
+    "description": "Chaqueta acolchada impermeable para perros con estampado de huesos",
+    "sizes": ["M", "L", "X-L", "X-X-L"],
+    "starsNumber": 3.5,
+    "maxStar": 5,
+    "prize": 75,
+    "img": "https://i.pinimg.com/236x/45/e3/ec/45e3ec95ce13e4821a5fba5271048820.jpg"
+  },
+  {
+    "id": 4,
+    "description": "Cama suave y acogedora para perros con diseño de pata de animal",
+    "sizes": ["M", "L", "X-L"],
+    "starsNumber": 4,
+    "maxStar": 5,
+    "prize": 90,
+    "img": "https://i.pinimg.com/236x/9b/8c/e1/9b8ce1cd37611254b3f70425686c8df0.jpg"
+  },
+  {
+    "id": 5,
+    "description": "Juguete interactivo para perros con forma de hueso resistente y duradero",
+    "sizes": ["L"],
+    "starsNumber": 4.5,
+    "maxStar": 5,
+    "prize": 15,
+    "img": "https://i.pinimg.com/236x/3b/6a/ed/3b6aedf7f3d1ad898c29e11462b12b4c.jpg"
+  },
+  {
+    "id": 6,
+    "description": "Arnés ajustable para perros con diseño reflectante para mayor seguridad nocturna",
+    "sizes": ["S", "M", "L", "X-L"],
+    "starsNumber": 4,
+    "maxStar": 5,
+    "prize": 35,
+    "img": "https://i.pinimg.com/236x/c0/de/24/c0de24ffae6801f5ad3cd50a83b18e08.jpg"
+  },
+  {
+    "id": 7,
+    "description": "Correa de nylon resistente para perros con mango acolchado y mosquetón giratorio",
+    "sizes": ["S", "M", "L"],
+    "starsNumber": 4.5,
+    "maxStar": 5,
+    "prize": 25,
+    "img": "https://i.pinimg.com/236x/07/98/0f/07980fd8ba6a846bd34227e97cedea9b.jpg"
+  },
+  {
+    "id": 8,
+    "description": "Juego de 3 juguetes masticables para perros en forma de pelota, hueso y cuerda",
+    "sizes": ["M", "L"],
+    "starsNumber": 5,
+    "maxStar": 5,
+    "prize": 20,
+    "img": "https://i.pinimg.com/236x/cf/f6/08/cff60859e8008b4ad6a418a1bebc6c0e.jpg"
+  },
+  {
+    "id": 9,
+    "description": "Abrigo de invierno para perros con forro polar cálido y cierre de velcro",
+    "sizes": ["S", "M", "L", "X-L"],
+    "starsNumber": 4,
+    "maxStar": 5,
+    "prize": 55,
+    "img": "https://i.pinimg.com/236x/9a/8b/f0/9a8bf0b66f6ce805c43db39507a58e73.jpg"
+  },
+  {
+    "id": 10,
+    "description": "Cama ortopédica para perros con memoria de forma y bordes elevados",
+    "sizes": ["M", "L", "X-L"],
+    "starsNumber": 5,
+    "maxStar": 5,
+    "prize": 150,
+    "img": "https://i.pinimg.com/474x/0f/15/83/0f158323aa328c34bdc34c038f5b8460.jpg"
+  },
+  {
+    "id": 11,
+    "description": "Comedero automático para perros con temporizador programable y dispensador de agua",
+    "sizes": ["L", "S"],
+    "starsNumber": 1,
+    "maxStar": 5,
+    "prize": 80,
+    "img": "https://i.pinimg.com/236x/fa/2a/25/fa2a2524f83106eca1cdb7367b333eb9.jpg"
+  },
+  {
+    "id": 12,
+    "description": "Juguete chirriante para perros con forma de pato de peluche y relleno suave",
+    "sizes": ["XS", "S", "M", "L", "X-L", "X-X-L"],
+    "starsNumber": 2,
+    "maxStar": 5,
+    "prize": 12,
+    "img": "https://i.pinimg.com/236x/08/b6/b6/08b6b6187d24ddf36ab47a21a465f7dd.jpg"
+  },
+  {
+    "id": 13,
+    "description": "Juguete chirriante para perros con forma de pato de peluche y relleno suave",
+    "sizes": ["L", "X-L", "X-X-L"],
+    "starsNumber": 5,
+    "maxStar": 5,
+    "prize": 12,
+    "img": "https://i.pinimg.com/236x/b4/c6/b5/b4c6b5b014be63969f35972236faed67.jpg"
+  }
+]
