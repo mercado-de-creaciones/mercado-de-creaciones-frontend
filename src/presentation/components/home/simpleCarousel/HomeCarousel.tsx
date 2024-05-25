@@ -13,19 +13,19 @@ export const HomeCarousel = () => {
         <div>
             <Carousel>
                 <CarouselContent>
-                    <CarouselItem className="lg:basis-1/2 md:basis-full">
+                    <CarouselItem className="lg:basis-1/2 basis-full">
                         <CarouselCard />
 
                     </CarouselItem>
-                    <CarouselItem className="lg:basis-1/2 md:basis-full">
+                    <CarouselItem className="lg:basis-1/2 basis-full">
                         <CarouselCard />
 
                     </CarouselItem>
-                    <CarouselItem className="lg:basis-1/2 md:basis-full">
+                    <CarouselItem className="lg:basis-1/2 basis-full">
                         <CarouselCard />
 
                     </CarouselItem>
-                    <CarouselItem className="lg:basis-1/2 md:basis-full">
+                    <CarouselItem className="lg:basis-1/2 basis-full">
                         <CarouselCard />
                     </CarouselItem>
                 </CarouselContent>

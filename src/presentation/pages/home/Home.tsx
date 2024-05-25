@@ -33,6 +33,11 @@ export const Home = () => {
                     <HomeCarousel />
                 </div>
             </div>
+            <div className="h-dvh w-full py-20">
+            <TypographyH3 className="text-3xl lg:text-5xl font-medium text-center"> <span className="font-bold">Visita</span> nuestros </TypographyH3>
+            <TypographyH1 className="font-bold my-3 leading-snug text-3xl lg:text-5xl text-center text-home-100">Productos destacados</TypographyH1>
+
+            </div>
         </div>
     )
 }
