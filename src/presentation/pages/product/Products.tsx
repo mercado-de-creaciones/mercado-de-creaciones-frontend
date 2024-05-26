@@ -21,93 +21,113 @@ export const Products = () => {
   return (
     <>
       {isDesktop ? (
-        <section className={`flex justify-between items-start p-4 font-inter mb-10 bg-[#FFF5E9] min-h-screen`}>
-          <div className="flex items-center">
-            <article className={`${isActiveAcordeonFilters ? "w-[100px]" : "w-[295px]"} duration-700 transition-all ease-in-out p-[20px] rounded-[20px]  bg-white shadow-sm fixed`}>
-              <div className={`${ isActiveAcordeonFilters && "items-center" } duration-700 transition-all ease-in-out flex flex-col gap-4`}>
-                {/* Filtros */}
-                <div className={`flex justify-between w-full mb-2`}>
-                  <h2 className="text-[18px] font-bold text-[#3F3D56]">
-                    Filtros
-                  </h2>
-                  <img
+        <section className={`flex justify-between items-start p-4 font-inter mb-10 bg-[#FFF5E9] min-h-screen relative`}>
+          <div className="fixed">
+            <div className="flex items-center">
+              <article className={`${isActiveAcordeonFilters ? "w-[100px]" : "w-[295px]"} duration-700 transition-all ease-in-out p-[20px] rounded-[20px]  bg-white shadow-sm `}>
+                <div className={`${ isActiveAcordeonFilters && "items-center" } duration-700 transition-all ease-in-out flex flex-col gap-4`}>
+                  {/* Filtros */}
+                  <div className={`flex justify-between w-full mb-2`}>
+                    <h2 className="text-[18px] font-bold text-[#3F3D56]">
+                      Filtros
+                    </h2>
+                    <img
+                      className={`${
+                        isActiveAcordeonFilters ? "w-0 overflow-hidden" : "w-[24px]"
+                      } duration-700 transition-all ease-in-out`}
+                      src={IconFiltros}
+                      alt="icon filter"
+                    />
+                  </div>
+
+                  {/* lupa */}
+                  <div
                     className={`${
-                      isActiveAcordeonFilters && "overflow-hidden"
-                    } duration-700 transition-all ease-in-out`}
-                    src={IconFiltros}
-                    alt="icon filter"
+                      isActiveAcordeonFilters ? "w-[38px]" : "w-full gap-2"
+                    } duration-700 transition-all ease-in-out border p-2 flex border-[#3F3D56] rounded-[8px]`}
+                  >
+                    <Search color="#3F3D56" />
+                    <input
+                      className={`${
+                        isActiveAcordeonFilters ? "w-0 overflow-hidden" : "w-full"
+                      } duration-700 transition-all ease-in-out outline-none`}
+                      type="text"
+                      placeholder="Buscar Productos"
+                    />
+                  </div>
+
+                  <hr className="mt-2 w-full" />
+
+                  {/* Sub categorias */}
+
+                  <AccordionTriggerCustom
+                    title="Sub Categorías"
+                    isActiveAccordion={isActiveAcordeonFilters}
+                    iconImg={IconSubCategorias}
+                    iconArrow={IconArrow}
+                  />
+                  <hr className="mt-2 w-full" />
+
+                  {/* Precio */}
+                  <AccordionTriggerCustom
+                    title="Precio"
+                    isActiveAccordion={isActiveAcordeonFilters}
+                    iconImg={IconPrice}
+                    iconArrow={IconArrow}
+                  />
+                  <hr className="mt-2 w-full" />
+
+                  {/* colores */}
+                  <AccordionTriggerCustom
+                    title="Colores"
+                    isActiveAccordion={isActiveAcordeonFilters}
+                    iconImg={IconColors}
+                    iconArrow={IconArrow}
+                  />
+                  {/* <Palette color="#3F3D56"/> */}
+                  <hr className="mt-2 w-full" />
+
+                  {/* tallas */}
+                  <AccordionTriggerCustom
+                    title="Tallas"
+                    isActiveAccordion={isActiveAcordeonFilters}
+                    iconArrow={IconArrow}
+                    iconImg={IconSizes}
                   />
                 </div>
 
-                {/* lupa */}
-                <div
-                  className={`${
-                    isActiveAcordeonFilters ? "w-[38px]" : "w-full gap-2"
-                  } duration-700 transition-all ease-in-out border p-2 flex border-[#3F3D56] rounded-[8px]`}
-                >
-                  <Search color="#3F3D56" />
-                  <input
-                    className={`${
-                      isActiveAcordeonFilters ? "w-0 overflow-hidden" : "w-full"
-                    } duration-700 transition-all ease-in-out outline-none`}
-                    type="text"
-                    placeholder="Buscar Productos"
-                  />
-                </div>
+              </article>
+                <img
+                src={IconArrow}
+                alt="icon arrow"
+                onClick={() =>
+                  setIsActiveAcordeonFilters(!isActiveAcordeonFilters)
+                }
+                className={`${
+                  isActiveAcordeonFilters ? "rotate-[180deg]" : "rotate-[360deg]"
+                } transform duration-700 transition-all ease-in-out cursor-pointer h-[30px] w-[9px] m-3`}
+              />
 
-                <hr className="mt-2 w-full" />
+              {/* fixed top-4 */}
 
-                {/* Sub categorias */}
 
-                <AccordionTriggerCustom
-                  title="Sub Categorías"
-                  isActiveAccordion={isActiveAcordeonFilters}
-                  iconImg={IconSubCategorias}
-                  iconArrow={IconArrow}
-                />
-                <hr className="mt-2 w-full" />
-
-                {/* Precio */}
-                <AccordionTriggerCustom
-                  title="Precio"
-                  isActiveAccordion={isActiveAcordeonFilters}
-                  iconImg={IconPrice}
-                  iconArrow={IconArrow}
-                />
-                <hr className="mt-2 w-full" />
-
-                {/* colores */}
-                <AccordionTriggerCustom
-                  title="Colores"
-                  isActiveAccordion={isActiveAcordeonFilters}
-                  iconImg={IconColors}
-                  iconArrow={IconArrow}
-                />
-                {/* <Palette color="#3F3D56"/> */}
-                <hr className="mt-2 w-full" />
-
-                {/* tallas */}
-                <AccordionTriggerCustom
-                  title="Tallas"
-                  isActiveAccordion={isActiveAcordeonFilters}
-                  iconArrow={IconArrow}
-                  iconImg={IconSizes}
-                />
-              </div>
-            </article>
-
-            {/* arrow */}
-            <img
-              src={IconArrow}
-              alt="icon arrow"
-              onClick={() =>
-                setIsActiveAcordeonFilters(!isActiveAcordeonFilters)
-              }
-              className={`${
-                isActiveAcordeonFilters ? "rotate-[180deg]" : "rotate-[360deg]"
-              } transform duration-700 transition-all ease-in-out cursor-pointer h-[30px] w-[9px] m-3`}
-            />
+              {/* arrow */}
+              {/* <img
+                src={IconArrow}
+                alt="icon arrow"
+                onClick={() =>
+                  setIsActiveAcordeonFilters(!isActiveAcordeonFilters)
+                }
+                className={`${
+                  isActiveAcordeonFilters ? "rotate-[180deg]" : "rotate-[360deg]"
+                } transform duration-700 transition-all ease-in-out cursor-pointer h-[30px] w-[9px] m-3`}
+              /> */}
+            </div>
+            
           </div>
+          <article className={`${isActiveAcordeonFilters ? "w-[100px]" : "w-[450px]"} duration-700 transition-all ease-in-out p-[20px] rounded-[20px]  bg-white shadow-sm opacity-0 mr-8`}>
+
+          </article>
 
           <article className="w-full text-center">
             <div className="bg-white h-[68px] flex items-center justify-center rounded-[20px] shadow-sm">
