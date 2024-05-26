@@ -1,11 +1,11 @@
 interface TriggerAccordion {
   title: string;
-  isActiveAccordion: boolean;
+  isActiveAccordion?: boolean;
   iconImg?: string;
   iconArrow: string;
 }
 
-const AccordionTriggerCustom = ({title, isActiveAccordion, iconImg, iconArrow}: TriggerAccordion) => {
+const AccordionTriggerCustom = ({title, isActiveAccordion = false, iconImg, iconArrow}: TriggerAccordion) => {
   return (
     <>
       <div className={`${isActiveAccordion ? "justify-center" : "justify-between" } flex w-full items-center`}>

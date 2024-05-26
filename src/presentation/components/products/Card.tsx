@@ -13,7 +13,6 @@ const Card = ({product}: CardProduct) => {
   
   const starRanking = (cant: number) => {
     const starsArray = Array(Math.floor(cant)).fill(null);
-    console.log(cant+0.5 );
     
     return (
       <>
@@ -27,7 +26,7 @@ const Card = ({product}: CardProduct) => {
         }
 
         {/* {cant+0.5 == (Math.floor(cant )+ 1) && <Circle size="18.49px"/> } */}
-        {cant+0.5 == (Math.floor(cant)+ 1) && <img src={IconStarHalf} alt="icon" /> }
+        {cant !== (Math.floor(cant)) && <img src={IconStarHalf} alt="icon" /> }
       </>
     )
   }
@@ -41,13 +40,13 @@ const Card = ({product}: CardProduct) => {
 
       <div className="p-3 bg-white rounded-b-lg flex flex-col justify-center items-stretch">
 
-        <p className="flex gap-2 items-center justify-start font-normal text-sm">{starRanking(starsNumber)}
+        <div className="flex gap-2 items-center justify-start font-normal text-sm">{starRanking(starsNumber)}
         <div className="flex">
           <p className="ml-3 text-[#366EFF]">{starsNumber}</p>
           <p className="text-black">/</p>
           <p className="text-[#00000099]">{maxStar}</p>
         </div>
-        </p>
+        </div>
 
         <p className="my-3 text-[#51596A] first-letter:uppercase font-semibold text-[15px] w-[200px] text-center">{description}
         </p>
@@ -62,16 +61,8 @@ const Card = ({product}: CardProduct) => {
             })
           }
         </div>
-        {/* <div className="flex justify-between w-full p-2 shadow-sm">
-          <p className="text-[11px] font-medium text-[#6E7A87]">X-S</p>
-          <p className="text-[11px] font-medium text-[#6E7A87]">S</p>
-          <p className="text-[11px] font-medium text-[#6E7A87]">M</p>
-          <p className="text-[11px] font-medium text-[#6E7A87]">L</p>
-          <p className="text-[11px] font-medium text-[#6E7A87]">X-L</p>
-          <p className="text-[11px] font-medium text-[#6E7A87]">X-X-L</p>
-        </div> */}
 
-        <p className="font-bold text-[22px] text-[#FF5A5A] mt-3">$120</p>
+        <p className="font-bold text-[22px] text-center text-[#FF5A5A] mt-3">${price}</p>
       </div>
 
     </div>

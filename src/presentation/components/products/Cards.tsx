@@ -16,7 +16,7 @@ const Cards = () => {
     getProducts();
   }, []);
   return (
-    <div className="mt-6 md:flex flex-wrap gap-10 justify-center">
+    <div className="mt-6 flex flex-wrap gap-10 justify-center">
       {
         products.map(product => {
           return (
