@@ -3,9 +3,10 @@ interface TriggerAccordion {
   isActiveAccordion?: boolean;
   iconImg?: string;
   iconArrow: string;
+  line?: boolean;
 }
 
-const AccordionTriggerCustom = ({title, isActiveAccordion = false, iconImg, iconArrow}: TriggerAccordion) => {
+const AccordionTriggerCustom = ({title, isActiveAccordion = false, iconImg, iconArrow, line=false}: TriggerAccordion) => {
   return (
     <>
       <div className={`${isActiveAccordion ? "justify-center" : "justify-between" } flex w-full items-center`}>
@@ -24,6 +25,9 @@ const AccordionTriggerCustom = ({title, isActiveAccordion = false, iconImg, icon
       </div>
 
       {/* <div>despliegue contenido</div> */}
+      {
+        line && <hr className="mt-2 w-full" />
+      }
     </>
   )
 }

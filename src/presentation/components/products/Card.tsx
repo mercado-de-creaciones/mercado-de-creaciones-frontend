@@ -1,8 +1,5 @@
-import { Circle, Star } from "lucide-react";
-import ImgPet from "/assets/dog-flow.png";
 import { Product } from "@/infrastructure/interfaces/products.response";
-import IconStar from "/assets/star.svg"
-import IconStarHalf from "/assets/star-half.svg"
+import { starRanking } from "@/presentation/hooks/starsRanking";
 
 interface CardProduct {
   product: Product;
@@ -11,27 +8,6 @@ interface CardProduct {
 const Card = ({product}: CardProduct) => {
   const {description, img, maxStar, price, sizes, starsNumber} = product;
   
-  const starRanking = (cant: number) => {
-    const starsArray = Array(Math.floor(cant)).fill(null);
-    
-    return (
-      <>
-        {
-          starsArray.map((_, i) => {
-            return (
-              // <Star size="18.49px" key={i}/>
-              <img key={i} src={IconStar} alt="icon" />
-            )
-          })
-        }
-
-        {/* {cant+0.5 == (Math.floor(cant )+ 1) && <Circle size="18.49px"/> } */}
-        {cant !== (Math.floor(cant)) && <img src={IconStarHalf} alt="icon" /> }
-      </>
-    )
-  }
-  
-
   return (
     <div className="w-[238px] rounded-lg shadow-md">
       <div className="bg-red-100 flex justify-center h-[222px] rounded-t-lg">
