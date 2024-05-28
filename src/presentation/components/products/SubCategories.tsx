@@ -9,19 +9,25 @@ import Accessories from "./Accessories";
 
 interface SubCategoriesProp {
   isActiveCollapsible?: boolean;
+  setIsActiveCollapsible: (value: boolean) => void;
 }
 
-const SubCategories = ({isActiveCollapsible =false} : SubCategoriesProp) => {
+const SubCategories = ({isActiveCollapsible =false, setIsActiveCollapsible} : SubCategoriesProp) => {
   const [activeAccordionItem, setActiveAccordionItem] = useState("")
 
   useEffect(() => {
     (isActiveCollapsible) && setActiveAccordionItem("");
   }, [isActiveCollapsible]);
 
+  const handleClick = () => {
+    (isActiveCollapsible) && setIsActiveCollapsible(!isActiveCollapsible);
+  }
+  
+
   return (
     <>
-      <Accordion value={activeAccordionItem} type="single" collapsible className="w-full mt-[-15px]"
-        onValueChange={setActiveAccordionItem}
+      <Accordion value={activeAccordionItem} type="single" collapsible className="w-full mt-[-15px]" onValueChange={setActiveAccordionItem}
+        onClick={handleClick}
       >
         <AccordionItem  value="item-1">
           <AccordionTrigger hiddenArrow={isActiveCollapsible}>

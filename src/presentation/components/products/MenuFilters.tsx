@@ -28,10 +28,10 @@ const MenuFilters = ({isActiveCollapsible=false, setIsActiveCollapsible} : MenuP
 
           <hr className="mt-2 w-full" />
 
-          <SubCategories isActiveCollapsible={isActiveCollapsible}/> 
-          <Price isActiveCollapsible={isActiveCollapsible}/>
-          <Colors isActiveCollapsible={isActiveCollapsible}/>
-          <Sizes isActiveCollapsible={isActiveCollapsible}/>
+          <SubCategories isActiveCollapsible={isActiveCollapsible} setIsActiveCollapsible={setIsActiveCollapsible} /> 
+          <Price isActiveCollapsible={isActiveCollapsible} setIsActiveCollapsible={setIsActiveCollapsible} />
+          <Colors isActiveCollapsible={isActiveCollapsible} setIsActiveCollapsible={setIsActiveCollapsible} />
+          <Sizes isActiveCollapsible={isActiveCollapsible} setIsActiveCollapsible={setIsActiveCollapsible}/>
 
         </div >
 

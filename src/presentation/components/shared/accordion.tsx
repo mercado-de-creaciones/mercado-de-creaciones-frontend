@@ -34,7 +34,7 @@ const arrowDirections: ArrowDirections = {
 
 type AccordionTriggerProps = {
   hiddenArrow?: boolean;
-  arrowRotation?: string;
+  arrowRotation?: number;
   arrowDirection?: keyof ArrowDirections;
 };
 
@@ -42,7 +42,7 @@ type AccordionTriggerProps = {
 const AccordionTrigger = React.forwardRef<
 React.ElementRef<typeof AccordionPrimitive.Trigger>,
 React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger> & AccordionTriggerProps
->(({ className, children, hiddenArrow= false, arrowRotation="180", arrowDirection="up", ...props }, ref) => {
+>(({ className, children, hiddenArrow= false, arrowRotation=180, arrowDirection="up", ...props }, ref) => {
   const ArrowIcon = arrowDirections[arrowDirection];
 
   return (
@@ -50,7 +50,13 @@ React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger> & AccordionTri
       <AccordionPrimitive.Trigger
         ref={ref}
         className={cn(
-          `flex-1 items-center justify-between flex py-4 font-medium transition-all [&[data-state=open]>svg]:rotate-${arrowRotation}`,
+          `flex-1 items-center justify-between flex py-4 font-medium transition-all
+          ${arrowRotation == 180 
+            ?
+             "[&[data-state=open]>svg]:rotate-180"
+            :
+            "[&[data-state=open]>svg]:rotate-90"
+          }`,
           className
         )}
         {...props}

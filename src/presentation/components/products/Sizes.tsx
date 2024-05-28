@@ -7,18 +7,25 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 interface SizesProp {
   isActiveCollapsible?: boolean;
+  setIsActiveCollapsible: (value: boolean) => void;
 }
 
-const Sizes = ({isActiveCollapsible=false} : SizesProp) => {
+const Sizes = ({isActiveCollapsible=false, setIsActiveCollapsible} : SizesProp) => {
 const [activeAccordionItem, setActiveAccordionItem] = useState("")
 
   useEffect(() => {
     (isActiveCollapsible) && setActiveAccordionItem("");
   }, [isActiveCollapsible]);
 
+  const handleClick = () => {
+    (isActiveCollapsible) && setIsActiveCollapsible(!isActiveCollapsible);
+  }
+
   return (
     <>
-      <Accordion value={activeAccordionItem} type="single" collapsible className="w-full mt-[-15px] mb-0" onValueChange={setActiveAccordionItem}>
+      <Accordion value={activeAccordionItem} type="single" collapsible className="w-full mt-[-15px] mb-0" 
+        onValueChange={setActiveAccordionItem} onClick={handleClick}
+      >
         <AccordionItem  value="item-1" borderBotton={false}>
           <AccordionTrigger hiddenArrow={isActiveCollapsible}>
             <div className={`${isActiveCollapsible ? "w-[94px] justify-center" : "w-auto"} overflow-hidden flex relative duration-700`}>

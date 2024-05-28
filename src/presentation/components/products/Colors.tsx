@@ -6,19 +6,24 @@ import { useEffect, useState } from "react";
 
 interface ColorsProp {
   isActiveCollapsible?: boolean;
+  setIsActiveCollapsible: (value: boolean) => void;
 }
 
-const Colors = ({isActiveCollapsible=false} :ColorsProp) => {
+const Colors = ({isActiveCollapsible=false, setIsActiveCollapsible} :ColorsProp) => {
   const [activeAccordionItem, setActiveAccordionItem] = useState("")
 
   useEffect(() => {
     (isActiveCollapsible) && setActiveAccordionItem("");
   }, [isActiveCollapsible]);
 
+  const handleClick = () => {
+    (isActiveCollapsible) && setIsActiveCollapsible(!isActiveCollapsible);
+  }
+
   return (
     <>
-      <Accordion value={activeAccordionItem} type="single" collapsible className="w-full mt-[-15px]"
-        onValueChange={setActiveAccordionItem}
+      <Accordion value={activeAccordionItem} type="single" collapsible className="w-full mt-[-15px]" onValueChange={setActiveAccordionItem}
+        onClick={handleClick}
       >
         <AccordionItem  value="item-1">
           <AccordionTrigger hiddenArrow={isActiveCollapsible}>

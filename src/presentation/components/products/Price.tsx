@@ -6,19 +6,24 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 interface PriceProp {
   isActiveCollapsible?: boolean; 
+  setIsActiveCollapsible: (value: boolean) => void;
 }
 
-const Price = ({isActiveCollapsible=false} :PriceProp) => {
+const Price = ({isActiveCollapsible=false, setIsActiveCollapsible} :PriceProp) => {
   const [activeAccordionItem, setActiveAccordionItem] = useState("")
 
   useEffect(() => {
     (isActiveCollapsible) && setActiveAccordionItem("");
   }, [isActiveCollapsible]);
 
+  const handleClick = () => {
+    (isActiveCollapsible) && setIsActiveCollapsible(!isActiveCollapsible);
+  }
+
   return (
     <>
-      <Accordion value={activeAccordionItem} type="single" collapsible className="w-full mt-[-15px]"
-        onValueChange={setActiveAccordionItem}
+      <Accordion value={activeAccordionItem} type="single" collapsible className="w-full mt-[-15px]" onValueChange={setActiveAccordionItem}
+        onClick={handleClick}
       >
         <AccordionItem  value="item-1">
           <AccordionTrigger hiddenArrow={isActiveCollapsible}>
