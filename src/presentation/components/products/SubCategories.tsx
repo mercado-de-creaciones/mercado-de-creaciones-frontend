@@ -1,8 +1,11 @@
+import { useEffect, useState } from "react";
+
 import IconSubCategorias from "/assets/icon-sub-categorias.svg";
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/presentation/components/shared/accordion";
 import Clothes from "./Clothes";
-import { useEffect, useState } from "react";
+import Toys from "./Toys";
+import Accessories from "./Accessories";
 
 interface SubCategoriesProp {
   isActiveCollapsible?: boolean;
@@ -17,7 +20,7 @@ const SubCategories = ({isActiveCollapsible =false} : SubCategoriesProp) => {
 
   return (
     <>
-      <Accordion value={activeAccordionItem} type="single" collapsible className="w-full mt-[-15px] border-b"
+      <Accordion value={activeAccordionItem} type="single" collapsible className="w-full mt-[-15px]"
         onValueChange={setActiveAccordionItem}
       >
         <AccordionItem  value="item-1">
@@ -29,6 +32,8 @@ const SubCategories = ({isActiveCollapsible =false} : SubCategoriesProp) => {
           </AccordionTrigger>
           <AccordionContent>
             <Clothes/>
+            <Toys/>
+            <Accessories/>
           </AccordionContent>
         </AccordionItem>
       </Accordion>

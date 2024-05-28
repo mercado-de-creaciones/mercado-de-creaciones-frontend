@@ -18,12 +18,8 @@ const [activeAccordionItem, setActiveAccordionItem] = useState("")
 
   return (
     <>
-      {/* <AccordionTriggerCustom title="Tallas" isActiveAccordion={isActiveCollapsible} iconArrow={IconArrow} iconImg={IconSizes}/> */}
-
-      <Accordion value={activeAccordionItem} type="single" collapsible className="w-full mt-[-15px]"
-        onValueChange={setActiveAccordionItem}
-      >
-        <AccordionItem  value="item-1">
+      <Accordion value={activeAccordionItem} type="single" collapsible className="w-full mt-[-15px] mb-0" onValueChange={setActiveAccordionItem}>
+        <AccordionItem  value="item-1" borderBotton={false}>
           <AccordionTrigger hiddenArrow={isActiveCollapsible}>
             <div className={`${isActiveCollapsible ? "w-[94px] justify-center" : "w-auto"} overflow-hidden flex relative duration-700`}>
               <img className={`overflow-hidden duration-700`} src={IconSizes} alt="icon tallas" />

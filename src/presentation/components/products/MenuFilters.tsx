@@ -6,7 +6,6 @@ import Price from "./Price";
 import Colors from "./Colors";
 import Sizes from "./Sizes";
 import SearchProduct from "./SearchProduct";
-import Test from "./Test";
 
 interface MenuProps {
   isActiveCollapsible: boolean;
@@ -25,7 +24,7 @@ const MenuFilters = ({isActiveCollapsible=false, setIsActiveCollapsible} : MenuP
             <img className={`${isActiveCollapsible ? "w-0 overflow-hidden" : "w-[24px]"} duration-700 `} src={IconFiltros} alt="icon filter" />
           </div>
 
-          <SearchProduct isActiveCollapsible={isActiveCollapsible}/>
+          <SearchProduct isActiveCollapsible={isActiveCollapsible} setIsActiveCollapsible={setIsActiveCollapsible}/>
 
           <hr className="mt-2 w-full" />
 
@@ -33,7 +32,6 @@ const MenuFilters = ({isActiveCollapsible=false, setIsActiveCollapsible} : MenuP
           <Price isActiveCollapsible={isActiveCollapsible}/>
           <Colors isActiveCollapsible={isActiveCollapsible}/>
           <Sizes isActiveCollapsible={isActiveCollapsible}/>
-          {/* <Test isActiveCollapsible={isActiveCollapsible}/> */}
 
         </div >
 

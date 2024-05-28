@@ -9,7 +9,7 @@ const Accordion = AccordionPrimitive.Root
 const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item> & {borderBotton?: boolean}
->(({ className, borderBotton=false, ...props }, ref) => (
+>(({ className, borderBotton=true, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
     className={cn(`${borderBotton && "border-b"}`, className)}
@@ -50,7 +50,7 @@ React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger> & AccordionTri
       <AccordionPrimitive.Trigger
         ref={ref}
         className={cn(
-          `flex-1 items-center justify-between flex py-4 font-medium transition-all [&[data-state=open]>svg]:rotate-[${arrowRotation}deg]`,
+          `flex-1 items-center justify-between flex py-4 font-medium transition-all [&[data-state=open]>svg]:rotate-${arrowRotation}`,
           className
         )}
         {...props}

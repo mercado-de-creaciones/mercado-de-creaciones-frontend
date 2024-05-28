@@ -17,7 +17,7 @@ const Price = ({isActiveCollapsible=false} :PriceProp) => {
 
   return (
     <>
-      <Accordion value={activeAccordionItem} type="single" collapsible className="w-full mt-[-15px] border-b"
+      <Accordion value={activeAccordionItem} type="single" collapsible className="w-full mt-[-15px]"
         onValueChange={setActiveAccordionItem}
       >
         <AccordionItem  value="item-1">
