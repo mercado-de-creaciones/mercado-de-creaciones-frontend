@@ -1,26 +1,32 @@
+import { useEffect, useState } from "react";
+// import IconArrow from "/assets/icon-arrow.svg";
 import IconSubCategorias from "/assets/icon-sub-categorias.svg";
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/presentation/components/shared/accordion";
-import Clothes from "./Clothes";
-import { useEffect, useState } from "react";
 
-interface SubCategoriesProp {
-  isActiveCollapsible?: boolean;
+interface TestProp {
+  isActiveCollapsible: boolean;
 }
 
-const SubCategories = ({isActiveCollapsible =false} : SubCategoriesProp) => {
-  const [activeAccordionItem, setActiveAccordionItem] = useState("")
+const Test = ({ isActiveCollapsible }: TestProp) => {
+  const [activeAccordionItem, setActiveAccordionItem] = useState("");
 
   useEffect(() => {
-    (isActiveCollapsible) && setActiveAccordionItem("");
+    if (isActiveCollapsible) {
+      setActiveAccordionItem(""); // Close the accordion when collapsible is active
+    }
   }, [isActiveCollapsible]);
 
   return (
     <>
-      <Accordion value={activeAccordionItem} type="single" collapsible className="w-full mt-[-15px] border-b"
+      <Accordion 
+        value={activeAccordionItem} 
+        type="single" 
+        collapsible 
+        className="w-full mt-[-15px]"
         onValueChange={setActiveAccordionItem}
       >
-        <AccordionItem  value="item-1">
+        <AccordionItem value="item-1">
           <AccordionTrigger hiddenArrow={isActiveCollapsible}>
             <div className={`${isActiveCollapsible ? "w-[94px] justify-center" : "w-auto"} overflow-hidden flex relative duration-700`}>
               <img className={`overflow-hidden duration-700`} src={IconSubCategorias} alt="icon sub categorías" />
@@ -28,12 +34,12 @@ const SubCategories = ({isActiveCollapsible =false} : SubCategoriesProp) => {
             </div>
           </AccordionTrigger>
           <AccordionContent>
-            <Clothes/>
+            contenido
           </AccordionContent>
         </AccordionItem>
       </Accordion>
     </>
-  )
+  );
 }
 
-export default SubCategories
+export default Test;

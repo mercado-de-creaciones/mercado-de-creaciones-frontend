@@ -1,23 +1,22 @@
-import { useState } from "react";
 import { useMediaQuery } from "@/presentation/hooks/use-media-query";
 
 import Desktop from "../../components/products/Desktop";
 import Mobile from "../../components/products/Mobile";
+import { useState } from "react";
 
 export const Products = () => {
-  const [isActiveAcordeonFilters, setIsActiveAcordeonFilters] = useState(false);
-
   const isDesktop = useMediaQuery("(min-width: 765px)");
+  const [isActiveCollapsible, setIsActiveCollapsible] = useState(false);
 
   return (
     <>
       {
-        isDesktop 
+        !isDesktop 
           ? (
-              <Desktop isActiveAcordeonFilters={isActiveAcordeonFilters}  setIsActiveAcordeonFilters={setIsActiveAcordeonFilters}/>
-            ) 
+            <Mobile isActiveCollapsible={isActiveCollapsible}  setIsActiveCollapsible={setIsActiveCollapsible}/> 
+          ) 
           : (
-              <Mobile isActiveAcordeonFilters={isActiveAcordeonFilters}  setIsActiveAcordeonFilters={setIsActiveAcordeonFilters}/> 
+            <Desktop isActiveCollapsible={isActiveCollapsible}  setIsActiveCollapsible={setIsActiveCollapsible}/>
             )
       }
     </>

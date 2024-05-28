@@ -9,24 +9,24 @@ import Sizes from "./Sizes";
 import SearchProduct from "./SearchProduct";
 
 interface MobileProps {
-  isActiveAcordeonFilters: boolean;
-  setIsActiveAcordeonFilters: (value: boolean) => void;
+  isActiveCollapsible: boolean;
+  setIsActiveCollapsible: (value: boolean) => void;
 }
 
-const Mobile = ({isActiveAcordeonFilters, setIsActiveAcordeonFilters} : MobileProps) => {
+const Mobile = ({isActiveCollapsible, setIsActiveCollapsible} : MobileProps) => {
   return (
-    <div className="bg-[#FFF5E9] min-h-screen relative p-12 flex justify-center">
+    <section className="bg-[#FFF5E9] min-h-screen relative p-12 flex justify-center">
 
-          <div className={`flex flex-col justify-center items-center w-[90%] fixed`}>
+          <article className={`flex flex-col justify-center items-center w-[90%] fixed`}>
             
-            <div className={`${isActiveAcordeonFilters ? "rounded-[6px]" : "rounded-t-[6px]"} flex justify-between w-full bg-white p-5` }>
+            <div className={`${isActiveCollapsible ? "rounded-[6px]" : "rounded-t-[6px]"} flex justify-between w-full bg-white p-5` }>
               <h2 className="text-[18px] font-bold text-[#3F3D56]">Filtros</h2>
-              <img className={`cursor-pointer`} onClick={() => setIsActiveAcordeonFilters(!isActiveAcordeonFilters)}
+              <img className={`cursor-pointer`} onClick={() => setIsActiveCollapsible(!isActiveCollapsible)}
                 src={IconHamgurger} alt="icon hamburger"/>
             </div>
 
 
-            <div className={`${isActiveAcordeonFilters ? "h-0 overflow-hidden opacity-0" : "h-full opacity-100 p-5 rounded-b-[6px]"} w-full flex flex-col gap-3 duration-700 ease-in-out bg-white transition-height transition-opacity`}> 
+            <div className={`${isActiveCollapsible ? "h-0 overflow-hidden opacity-0" : "h-full opacity-100 p-5 rounded-b-[6px]"} w-full flex flex-col gap-3 duration-700 ease-in-out bg-white transition-height transition-opacity`}> 
 
                 <SearchProduct />
 
@@ -37,12 +37,12 @@ const Mobile = ({isActiveAcordeonFilters, setIsActiveAcordeonFilters} : MobilePr
                 <Colors/>
                 <Sizes/>
             </div>
-          </div>
+          </article>
 
-            <div className="py-[100px]">
+            <article className="py-[100px]">
               <Cards /> 
-            </div>
-        </div>
+            </article>
+        </section>
   )
 }
 

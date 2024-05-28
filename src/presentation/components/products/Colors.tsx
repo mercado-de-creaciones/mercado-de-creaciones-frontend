@@ -1,18 +1,37 @@
-import IconArrow from "/assets/icon-arrow.svg";
 import IconColors from "/assets/icon-colors.svg";
 
-import AccordionTriggerCustom from "./AccordionTriggerCustom"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/presentation/components/shared/accordion";
+import { useEffect, useState } from "react";
+
 
 interface ColorsProp {
-  isActiveAcordeonFilters?: boolean;
+  isActiveCollapsible?: boolean;
 }
 
-const Colors = ({isActiveAcordeonFilters=false} :ColorsProp) => {
+const Colors = ({isActiveCollapsible=false} :ColorsProp) => {
+  const [activeAccordionItem, setActiveAccordionItem] = useState("")
+
+  useEffect(() => {
+    (isActiveCollapsible) && setActiveAccordionItem("");
+  }, [isActiveCollapsible]);
+
   return (
     <>
-      <AccordionTriggerCustom title="Colores" isActiveAccordion={isActiveAcordeonFilters} iconImg={IconColors} iconArrow={IconArrow}
-        line={true}
-      />
+      <Accordion value={activeAccordionItem} type="single" collapsible className="w-full mt-[-15px] border-b"
+        onValueChange={setActiveAccordionItem}
+      >
+        <AccordionItem  value="item-1">
+          <AccordionTrigger hiddenArrow={isActiveCollapsible}>
+            <div className={`${isActiveCollapsible ? "w-[94px] justify-center" : "w-auto"} overflow-hidden flex relative duration-700`}>
+              <img className={`overflow-hidden duration-700`} src={IconColors} alt="icon colors" />
+              <h3 className={`${isActiveCollapsible ? "w-0" : "w-full ml-2"} overflow-hidden whitespace-nowrap text-lg font-medium text-gray-800 duration-700 transition-all ease-in-out`}>Colors</h3>
+            </div>
+          </AccordionTrigger>
+          <AccordionContent>
+            Contenido...
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
     </>
   )
 }

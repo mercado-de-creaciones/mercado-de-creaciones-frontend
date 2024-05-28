@@ -1,14 +1,14 @@
 import { Search } from "lucide-react"
 
 interface SearchProductProp {
-  isActiveAcordeonFilters?: boolean;
+  isActiveCollapsible?: boolean;
 }
 
-const SearchProduct = ({isActiveAcordeonFilters=false} : SearchProductProp) => {
+const SearchProduct = ({isActiveCollapsible=false} : SearchProductProp) => {
   return (
-    <div className={`${isActiveAcordeonFilters ? "w-[38px]" : "w-full gap-2"} duration-700 transition-all ease-in-out border p-2 flex border-[#3F3D56] rounded-[8px]`}>
+    <div className={`${isActiveCollapsible ? "w-[38px] ml-[7.5px]" : "w-full gap-2"} overflow-hidden duration-700 border p-2 flex border-[#3F3D56] rounded-[8px]`}>
       <Search color="#3F3D56"/>
-      <input className={`${ isActiveAcordeonFilters ? "w-0 overflow-hidden" : "w-full" } duration-700 transition-all ease-in-out outline-none`} type="text" placeholder="Buscar Productos"/> 
+      <input className={`${ isActiveCollapsible ? "w-0" : "w-full" } overflow-hidden duration-700 outline-none`} type="text" placeholder="Buscar Productos"/> 
     </div>
   )
 }

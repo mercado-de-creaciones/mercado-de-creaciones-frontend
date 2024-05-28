@@ -3,22 +3,23 @@ import MenuFilters from "./MenuFilters";
 
 
 interface DesktopProps {
-  isActiveAcordeonFilters: boolean;
-  setIsActiveAcordeonFilters: (valor: boolean) => void;
+  isActiveCollapsible: boolean;
+  setIsActiveCollapsible: (valor: boolean) => void;
 }
 
-const Desktop = ({isActiveAcordeonFilters, setIsActiveAcordeonFilters}: DesktopProps) => {
+const Desktop = ({isActiveCollapsible, setIsActiveCollapsible}: DesktopProps) => {
   return (
     <section className={`flex justify-between items-start p-4 font-inter mb-10 bg-[#FFF5E9] min-h-screen relative`}>
 
-      <article className="fixed">
-        <MenuFilters  isActiveAcordeonFilters={isActiveAcordeonFilters} setIsActiveAcordeonFilters={setIsActiveAcordeonFilters}/>   
+      <article className={`fixed w-full overflow-hidden`}>
+        <MenuFilters  isActiveCollapsible={isActiveCollapsible} setIsActiveCollapsible={setIsActiveCollapsible}/>   
       </article>
 
-      <article className={`${isActiveAcordeonFilters ? "w-[100px]" : "w-[450px]"} duration-700 transition-all ease-in-out p-[20px] rounded-[20px] opacity-0 mr-8`}>
+      <article className={`${isActiveCollapsible ? "w-[150px]" : "w-[430px]"} overflow-hidden duration-700 p-[20px] rounded-[20px] opacity-0`}>
+        <div>hidden</div>
       </article>
 
-      <article className="w-full text-center">
+      <article className="w-[90%] text-center">
         <div className="bg-white h-[68px] flex items-center justify-center rounded-[20px] shadow-sm">
           <h2 className="text-[30px] font-medium text-[#3F3D56] text-left w-full px-6">
             Mascotas/

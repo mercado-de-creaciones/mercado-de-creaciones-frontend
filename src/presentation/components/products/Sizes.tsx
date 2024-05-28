@@ -1,17 +1,40 @@
-import IconSizes from "/assets/icon-sizes.svg";
-import IconArrow from "/assets/icon-arrow.svg";
+import { useEffect, useState } from "react";
 
-import AccordionTriggerCustom from "./AccordionTriggerCustom";
+import IconSizes from "/assets/icon-sizes.svg";
+
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/presentation/components/shared/accordion";
 
 
 interface SizesProp {
-  isActiveAcordeonFilters?: boolean;
+  isActiveCollapsible?: boolean;
 }
 
-const Sizes = ({isActiveAcordeonFilters=false} : SizesProp) => {
+const Sizes = ({isActiveCollapsible=false} : SizesProp) => {
+const [activeAccordionItem, setActiveAccordionItem] = useState("")
+
+  useEffect(() => {
+    (isActiveCollapsible) && setActiveAccordionItem("");
+  }, [isActiveCollapsible]);
+
   return (
     <>
-      <AccordionTriggerCustom title="Tallas" isActiveAccordion={isActiveAcordeonFilters} iconArrow={IconArrow} iconImg={IconSizes}/>
+      {/* <AccordionTriggerCustom title="Tallas" isActiveAccordion={isActiveCollapsible} iconArrow={IconArrow} iconImg={IconSizes}/> */}
+
+      <Accordion value={activeAccordionItem} type="single" collapsible className="w-full mt-[-15px]"
+        onValueChange={setActiveAccordionItem}
+      >
+        <AccordionItem  value="item-1">
+          <AccordionTrigger hiddenArrow={isActiveCollapsible}>
+            <div className={`${isActiveCollapsible ? "w-[94px] justify-center" : "w-auto"} overflow-hidden flex relative duration-700`}>
+              <img className={`overflow-hidden duration-700`} src={IconSizes} alt="icon tallas" />
+              <h3 className={`${isActiveCollapsible ? "w-0" : "w-full ml-2"} overflow-hidden whitespace-nowrap text-lg font-medium text-gray-800 duration-700 transition-all ease-in-out`}>Tallas</h3>
+            </div>
+          </AccordionTrigger>
+          <AccordionContent>
+            contenido..
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
     </>
   );
 };
