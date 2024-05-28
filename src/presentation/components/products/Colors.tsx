@@ -22,7 +22,7 @@ const Colors = ({isActiveCollapsible=false, setIsActiveCollapsible} :ColorsProp)
 
   return (
     <>
-      <Accordion value={activeAccordionItem} type="single" collapsible className="w-full mt-[-15px]" onValueChange={setActiveAccordionItem}
+      <Accordion value={activeAccordionItem} type="single" collapsible className="w-full" onValueChange={setActiveAccordionItem}
         onClick={handleClick}
       >
         <AccordionItem  value="item-1">

@@ -15,13 +15,13 @@ interface MenuProps {
 const MenuFilters = ({isActiveCollapsible=false, setIsActiveCollapsible} : MenuProps) => {
   return (
 
-    <section className="flex items-center fixed">
+    <section className="flex items-center">
       <div className={`${isActiveCollapsible ? "w-[94px]" : "w-[295px]"} overflow-hidden duration-700  p-[20px] rounded-[20px]  bg-white shadow-sm opacity-80`}>
-        <div className={`duration-700 flex flex-col gap-3`}>
+        <div className={`duration-700 flex-col gap-3`}>
 
-          <div className={`justify-between flex w-full mb-2 duration-700 `}>
+          <div className={`justify-between flex w-full mb-6 duration-700 `}>
             <h2 className="text-[18px] font-bold text-[#3F3D56]">Filtros</h2>
-            <img className={`${isActiveCollapsible ? "w-0 overflow-hidden" : "w-[24px]"} duration-700 `} src={IconFiltros} alt="icon filter" />
+            <img className={`${isActiveCollapsible ? "w-0 " : "w-[24px]"} overflow-hidden duration-700 `} src={IconFiltros} alt="icon filter" />
           </div>
 
           <SearchProduct isActiveCollapsible={isActiveCollapsible} setIsActiveCollapsible={setIsActiveCollapsible}/>
