@@ -16,7 +16,7 @@ const MenuFilters = ({isActiveCollapsible=false, setIsActiveCollapsible} : MenuP
   return (
 
     <section className="flex items-center">
-      <div className={`${isActiveCollapsible ? "w-[94px]" : "w-[295px]"} overflow-hidden duration-700  p-[20px] rounded-[20px]  bg-white shadow-sm opacity-80`}>
+      <div className={`${isActiveCollapsible ? "w-[94px]" : "w-[295px]"} overflow-hidden duration-700  p-[20px] rounded-[20px]  bg-white shadow-md`}>
         <div className={`duration-700 flex-col gap-3`}>
 
           <div className={`justify-between flex w-full mb-6 duration-700 `}>

@@ -9,7 +9,7 @@ const Card = ({product}: CardProduct) => {
   const {description, img, maxStar, price, sizes, starsNumber} = product;
   
   return (
-    <div className="w-[238px] rounded-lg shadow-md">
+    <div className="w-[238px] rounded-lg shadow-md bg-white">
       <div className="bg-red-100 flex justify-center h-[222px] rounded-t-lg">
         <img className="object-cover w-full rounded-t-lg" src={img} alt="img pet"/>      
       </div>

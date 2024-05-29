@@ -11,7 +11,7 @@ const Desktop = ({isActiveCollapsible, setIsActiveCollapsible}: DesktopProps) =>
   return (
     <section className={`flex justify-between items-start p-4 font-inter mb-10 bg-[#FFF5E9] min-h-screen relative`}>
 
-      <article className={`fixed w-full overflow-hidden`}>
+      <article className={`fixed w-full`}>
         <MenuFilters  isActiveCollapsible={isActiveCollapsible} setIsActiveCollapsible={setIsActiveCollapsible}/>   
       </article>
 
