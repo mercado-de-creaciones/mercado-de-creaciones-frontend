@@ -12,11 +12,10 @@ import {
 	FormMessage,
 } from '@/presentation/components/ui/form';
 
-import { Button } from '@/presentation/components/ui/button';
 import { Input } from '@/presentation/components/ui/input';
+import { Button } from '@/presentation/components/ui/button';
 import { registerSchema } from '@/presentation/validations/userSchema';
-import { HeaderAuth } from '@/presentation/components/auth';
-import { TypographyP } from '@/presentation/components/ui/TypographyP';
+import { TypographyH2,TypographyP } from '@/presentation/components/typography';
 
 export const Register = () => {
 	const form = useForm<z.infer<typeof registerSchema>>({
@@ -34,7 +33,7 @@ export const Register = () => {
 
 	return (
 		<div className='w-full p-4 sm:p-8 flex flex-col gap-4'>
-			<HeaderAuth title='Registrarse' />
+			<TypographyH2 className='uppercase text-center'>Register</TypographyH2>
 
 			<Form {...form}>
 				<form
@@ -43,12 +42,17 @@ export const Register = () => {
 					<FormField
 						control={form.control}
 						name='name'
-						render={({ field }) => (
+						render={({ field, formState: { errors } }) => (
 							<FormItem>
 								<FormLabel>Nombre</FormLabel>
 								<FormControl>
 									<Input
 										placeholder='Jon doe'
+										className={`border ${
+											errors.name?.message
+												? 'border-red-500'
+												: 'border-blue-600'
+										}`}
 										{...field}
 									/>
 								</FormControl>
@@ -60,12 +64,17 @@ export const Register = () => {
 					<FormField
 						control={form.control}
 						name='email'
-						render={({ field }) => (
+						render={({ field, formState: { errors } }) => (
 							<FormItem>
 								<FormLabel>Correo</FormLabel>
 								<FormControl>
 									<Input
 										placeholder='example@gmail.com'
+										className={`border ${
+											errors.email?.message
+												? 'border-red-500'
+												: 'border-blue-600'
+										}`}
 										{...field}
 									/>
 								</FormControl>
@@ -77,12 +86,17 @@ export const Register = () => {
 					<FormField
 						control={form.control}
 						name='password'
-						render={({ field }) => (
+						render={({ field, formState: { errors } }) => (
 							<FormItem>
 								<FormLabel>Contraseña</FormLabel>
 								<FormControl>
 									<Input
 										placeholder='**********'
+										className={`border ${
+											errors.password?.message
+												? 'border-red-500'
+												: 'border-blue-600'
+										}`}
 										{...field}
 									/>
 								</FormControl>
@@ -93,10 +107,8 @@ export const Register = () => {
 
 					<Button
 						type='submit'
-						className='
-						bg-gradient-to-r from-[#6993FF] 
-						via-[#CE67FF] to-[#FFC760] w-full 
-						text-base py-[22px] rounded-xl'>
+						className='w-full'
+						variant='gradient'>
 						Registrase
 					</Button>
 
