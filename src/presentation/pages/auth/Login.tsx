@@ -99,7 +99,7 @@ export const Login = () => {
 
 					<Divider />
 
-					<ButtonWithIcon type='button'>
+					<ButtonWithIcon type='button' className='hidden'>
 						<Google className='w-5 h-5' /> Ingresar
 					</ButtonWithIcon>
 
