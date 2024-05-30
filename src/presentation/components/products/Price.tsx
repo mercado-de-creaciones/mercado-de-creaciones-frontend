@@ -3,6 +3,7 @@ import IconPrice from "/assets/icon-price.svg";
 import { useEffect, useState } from 'react';
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/presentation/components/shared/accordion";
+import PriceSliderRadio from "./PriceSliderRadio";
 
 interface PriceProp {
   isActiveCollapsible?: boolean; 
@@ -32,8 +33,8 @@ const Price = ({isActiveCollapsible=false, setIsActiveCollapsible} :PriceProp) =
               <h3 className={`${isActiveCollapsible ? "w-0" : "w-full ml-2"} overflow-hidden whitespace-nowrap text-lg font-medium text-gray-800 duration-700 transition-all ease-in-out`}>Precio</h3>
             </div>
           </AccordionTrigger>
-          <AccordionContent>
-            Contenido...
+          <AccordionContent className="mr-3">
+            <PriceSliderRadio/>
           </AccordionContent>
         </AccordionItem>
       </Accordion>

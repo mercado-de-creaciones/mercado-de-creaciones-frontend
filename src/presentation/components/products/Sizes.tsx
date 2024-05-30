@@ -11,6 +11,17 @@ interface SizesProp {
   setIsActiveCollapsible: (value: boolean) => void;
 }
 
+// const sizeMapping = {
+//   "XX-Small": "XX-S",
+//   "X-Small": "XS",
+//   "Small": "S",
+//   "Medium": "M",
+//   "Large": "L",
+//   "X-Large": "X-L",
+//   "XX-Large": "X-X-L",
+//   "3X-Large": "3X-L",
+//   "4X-Large": "4X-L"
+// }
 const sizes = ["XX-Small", "X-Small", "Small", "Medium", "Large", "X-Large", "XX-Large", "3X-Large", "4X-Large"];
 
 const Sizes = ({isActiveCollapsible=false, setIsActiveCollapsible} : SizesProp) => {
