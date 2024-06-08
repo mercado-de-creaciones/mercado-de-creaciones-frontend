@@ -5,7 +5,7 @@ import { MessageResponse } from "@/infrastructure/interfaces/api.responses";
 
 interface Options{
   baseURL: string;
-  params: Record<string, string>;
+  params?: Record<string, string>;
 }
 
 export class AxiosAdapter implements HttpAdapter{
@@ -14,7 +14,10 @@ export class AxiosAdapter implements HttpAdapter{
   constructor(options: Options) { 
     this.axiosInstance = axios.create({
       baseURL: options.baseURL,
-      params: options.params
+      params: options.params,
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
     });
   }
 
@@ -25,6 +28,7 @@ export class AxiosAdapter implements HttpAdapter{
     } catch (error) {
       const serverError = error as AxiosError;
       const errorMessage = serverError.response?.data as MessageResponse;
+      
       throw new Error(errorMessage.message);
     }
   }
