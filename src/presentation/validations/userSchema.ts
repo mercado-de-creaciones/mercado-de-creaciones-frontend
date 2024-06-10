@@ -20,3 +20,16 @@ export const registerSchema = z.object({
 		message: 'La contraseña debe tener minimo 6 caracteres',
 	}),
 });
+
+export const resetPasswordSchema = z.object({
+	email: z.string().email({
+		message: 'Por favor ingresa un correo valido',
+	}),
+});
+
+export const newPasswordSchema = z.object({
+	password: z.string().min(6, {
+		message: 'La contraseña debe tener minimo 6 caracteres',
+	}),
+});
+
