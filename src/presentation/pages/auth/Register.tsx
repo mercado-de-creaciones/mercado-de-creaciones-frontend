@@ -15,7 +15,11 @@ import {
 import { Input } from '@/presentation/components/ui/input';
 import { Button } from '@/presentation/components/ui/button';
 import { registerSchema } from '@/presentation/validations/userSchema';
-import { TypographyH2,TypographyP } from '@/presentation/components/typography';
+import {
+	TypographyH2,
+	TypographyP,
+} from '@/presentation/components/typography';
+import { useRegisterMutation } from '@/presentation/hooks/auth/useRegisterMutation';
 
 export const Register = () => {
 	const form = useForm<z.infer<typeof registerSchema>>({
@@ -27,8 +31,10 @@ export const Register = () => {
 		},
 	});
 
+	const { registerMutation } = useRegisterMutation();
+
 	function onSubmit(values: z.infer<typeof registerSchema>) {
-		console.log(values);
+		registerMutation.mutateAsync(values);
 	}
 
 	return (
@@ -100,7 +106,9 @@ export const Register = () => {
 										{...field}
 									/>
 								</FormControl>
-								<FormMessage />
+								<FormMessage>
+									{registerMutation && registerMutation.error?.message}
+								</FormMessage>
 							</FormItem>
 						)}
 					/>
