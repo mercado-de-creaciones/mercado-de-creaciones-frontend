@@ -6,6 +6,7 @@ import home from '/home-image.png'
 import paws from '/home-paws.png'
 import { Button } from "@/presentation/components/ui/button"
 import { HomeCarousel } from "@/presentation/components/home/simpleCarousel/HomeCarousel"
+import { CoverflowCarousel } from "@/presentation/components/home/coverflowCarousel/CoverflowCarousel"
 
 export const Home = () => {
     return (
@@ -36,7 +37,7 @@ export const Home = () => {
             <div className="h-dvh w-full py-20">
             <TypographyH3 className="text-3xl lg:text-5xl font-medium text-center"> <span className="font-bold">Visita</span> nuestros </TypographyH3>
             <TypographyH1 className="font-bold my-3 leading-snug text-3xl lg:text-5xl text-center text-home-100">Productos destacados</TypographyH1>
-
+            <CoverflowCarousel />
             </div>
         </div>
     )
