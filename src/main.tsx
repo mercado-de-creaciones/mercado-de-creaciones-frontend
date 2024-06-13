@@ -10,7 +10,7 @@ import { ResetPassword } from './presentation/pages/auth/ResetPassword';
 import { NewPassword } from './presentation/pages/auth/NewPassword';
 import { ConfirmAccount } from './presentation/pages/auth/ConfirmAccount';
 import { AuthLayout } from './presentation/layouts/AuthLayout';
-import { HomeLayout } from './presentation/components/layouts/HomeLayout';
+import { HomeLayout } from './presentation/layouts/HomeLayout';
 import { Home } from './presentation/pages/home/Home';
 
 const queryClientProvider = new QueryClient();
@@ -28,28 +28,28 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/",
+    path: "/auth",
     element: <AuthLayout/>,
     children: [
       {
         index: true,
-        path: "/",
+        path: "",
         element: <Login />,
       },
       {
-        path: "/registrar",
+        path: "registrar",
         element: <Register />,
       },
       {
-        path: "/olvide-password",
+        path: "olvide-password",
         element: <ResetPassword />,
       },
       {
-        path: "/olvide-password/:token",
+        path: "olvide-password/:token",
         element: <NewPassword />,
       },
       {
-        path: "/confirmar/:id",
+        path: "confirmar/:id",
         element: <ConfirmAccount />,
       },
     ],

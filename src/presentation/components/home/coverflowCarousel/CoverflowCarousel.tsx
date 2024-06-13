@@ -41,6 +41,16 @@ export const CoverflowCarousel = () => {
                 <SwiperSlide className="max-w-56">
                     <CarouselCard />
                 </SwiperSlide>
+                <SwiperSlide className="max-w-56">
+                    <CarouselCard />
+                </SwiperSlide>
+                <SwiperSlide className="max-w-56">
+                    <CarouselCard />
+                </SwiperSlide>
+
+
+
+
 
 
 

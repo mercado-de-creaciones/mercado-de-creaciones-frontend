@@ -9,8 +9,8 @@ export const Header = () => {
             <NavLink to="/" className={buttonVariants({ variant: "link" })}>Home</NavLink>
             <NavLink to="/" className={buttonVariants({ variant: "link" })}>Categorias</NavLink>
             <NavLink to="/" className={buttonVariants({ variant: "link" })}>Sobre nosotros</NavLink>
-            <NavLink to="/" className={buttonVariants({ variant: "blue" })}>Iniciar sesión</NavLink>
-            <NavLink to="/" className={buttonVariants({ variant: "outlineblue" })}>Registrarse</NavLink>
+            <NavLink to="/auth/" className={buttonVariants({ variant: "blue" })}>Iniciar sesión</NavLink>
+            <NavLink to="/auth/registrar" className={buttonVariants({ variant: "outlineblue" })}>Registrarse</NavLink>
 
             </div>
 
