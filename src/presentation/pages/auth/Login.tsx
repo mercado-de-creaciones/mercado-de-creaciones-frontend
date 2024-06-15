@@ -80,7 +80,7 @@ export const Login = () => {
                 <FormLabel>Contraseña</FormLabel>
                 <FormControl>
                   <Input
-                    placeholder="**********"
+                    placeholder="*****************"
                     className={`border ${
                       errors.email?.message
                         ? "border-red-500"
@@ -96,7 +96,7 @@ export const Login = () => {
             )}
           />
 
-          <Link to="/olvide-password" className="text-[#366EFF] text-md">
+          <Link to="/auth/olvide-password" className="text-[#366EFF] text-md">
             ¿Olvidaste tu contraseña?
           </Link>
 
@@ -112,8 +112,8 @@ export const Login = () => {
 
           <TypographyP className="text-md">
             ¿No tienes cuenta?
-            <Link to="/registrar" className="text-[#366EFF] ml-2 font-medium">
-              registrate
+            <Link to="/auth/registrar" className="text-[#366EFF] ml-2 font-medium">
+              Crea una
             </Link>
           </TypographyP>
         </form>

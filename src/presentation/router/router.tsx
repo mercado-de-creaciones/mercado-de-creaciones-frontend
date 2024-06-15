@@ -12,7 +12,7 @@ import { Home } from "../pages/home/Home";
 
 const authRoutes = [
   {
-    to: "/auth",
+    to: "/auth/login",
     component: <Login />,
   },
   {

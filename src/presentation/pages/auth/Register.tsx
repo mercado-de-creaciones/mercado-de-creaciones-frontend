@@ -48,7 +48,9 @@ export const Register = () => {
       {registerMutation.data && (
         <Alert variant="success">
           <MailCheck />
-          <AlertTitle className="ml-2">{registerMutation.data.message}</AlertTitle>
+          <AlertTitle className="ml-2">
+            {registerMutation.data.message}
+          </AlertTitle>
         </Alert>
       )}
 
@@ -126,7 +128,7 @@ export const Register = () => {
             )}
           />
 
-          <Link to="/olvide-password" className="text-[#366EFF] text-md">
+          <Link to="/auth/olvide-password" className="text-[#366EFF] text-md">
             ¿Olvidaste tu contraseña?
           </Link>
 
@@ -136,7 +138,7 @@ export const Register = () => {
 
           <TypographyP className="text-md">
             ¿Ya tienes cuenta?
-            <Link to="/" className="text-[#366EFF] ml-2 font-medium">
+            <Link to="/auth/login" className="text-[#366EFF] ml-2 font-medium">
               Inicia Sesión
             </Link>
           </TypographyP>

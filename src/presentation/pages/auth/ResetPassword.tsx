@@ -105,15 +105,18 @@ export const ResetPassword = () => {
           <div className="flex flex-col md:flex-row gap-4 items-center">
             <TypographyP className="text-md text-balance">
               ¿Ya tienes cuenta?
-              <Link to="/" className="text-[#366EFF] ml-2 font-medium">
+              <Link to="/auth/login" className="text-[#366EFF] ml-2 font-medium">
                 Inicia sesion
               </Link>
             </TypographyP>
 
             <TypographyP className="text-md">
               ¿No tienes cuenta?
-              <Link to="/registrar" className="text-[#366EFF] ml-2 font-medium">
-                registrate
+              <Link
+                to="/auth/registrar"
+                className="text-[#366EFF] ml-2 font-medium"
+              >
+                Crea una
               </Link>
             </TypographyP>
           </div>

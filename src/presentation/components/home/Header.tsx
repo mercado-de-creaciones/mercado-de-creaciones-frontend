@@ -24,7 +24,7 @@ export const Header = () => {
         ) : (
           <>
             <NavLink
-              to="/auth/"
+              to="/auth/login"
               className={buttonVariants({ variant: "blue" })}
             >
               Iniciar sesión
