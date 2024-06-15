@@ -32,68 +32,68 @@ export const ResetPassword = () => {
 	};
 
 	return (
-		<div className='flex flex-col gap-4 p-4 sm:px-8 sm:py-5 '>
-			<header>
-				<TypographyH2>Recuperar contraseña</TypographyH2>
-				<TypographyP className='text-[#202446]'>
-					Recupera tu cuenta de [logo de la empresa]
-				</TypographyP>
-			</header>
+    <div className="flex flex-col gap-4 p-4 sm:px-8 sm:py-5 ">
+      <header>
+        <TypographyH2 className="uppercase text-center">
+          Recuperar contraseña
+        </TypographyH2>
+        <TypographyP className="text-center">
+          Recupera tu cuenta para acceder a tus productos
+        </TypographyP>
+      </header>
 
-			<Form {...form}>
-				<form
-					onSubmit={form.handleSubmit(onSubmit)}
-					className='flex flex-col gap-4'>
-					<FormField
-						control={form.control}
-						name='email'
-						render={({ field, formState: { errors } }) => (
-							<FormItem>
-								<FormLabel>Correo</FormLabel>
-								<FormControl>
-									<Input
-										placeholder='example@gmail.com'
-										className={`border ${
-											errors.email?.message
-												? 'border-red-500'
-												: 'border-blue-600'
-										}`}
-										{...field}
-									/>
-								</FormControl>
-								<FormMessage />
-							</FormItem>
-						)}
-					/>
+      <Form {...form}>
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="flex flex-col gap-4"
+        >
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field, formState: { errors } }) => (
+              <FormItem>
+                <FormLabel>Correo</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder="example@gmail.com"
+                    className={`border ${
+                      errors.email?.message
+                        ? "border-red-500"
+                        : "border-blue-600"
+                    }`}
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
-					<Button
-						type='submit'
-						variant='blue'
-						className='hover:bg-[#366EFF]/90'>
-						Recuperar
-					</Button>
+          <Button
+            type="submit"
+            variant="blue"
+            className="hover:bg-[#366EFF]/90"
+          >
+            Recuperar
+          </Button>
 
-					<div>
-						<TypographyP className='text-sm'>
-							¿Ya tienes cuenta?
-							<Link
-								to='/'
-								className='text-[#366EFF] ml-2 font-medium'>
-								Inicia sesion
-							</Link>
-						</TypographyP>
+          <div className="flex flex-col md:flex-row gap-4 items-center">
+            <TypographyP className="text-md text-balance">
+              ¿Ya tienes cuenta?
+              <Link to="/" className="text-[#366EFF] ml-2 font-medium">
+                Inicia sesion
+              </Link>
+            </TypographyP>
 
-						<TypographyP className='text-sm'>
-							¿No tienes cuenta?
-							<Link
-								to='/registrar'
-								className='text-[#366EFF] ml-2 font-medium'>
-								registrate
-							</Link>
-						</TypographyP>
-					</div>
-				</form>
-			</Form>
-		</div>
-	);
+            <TypographyP className="text-md">
+              ¿No tienes cuenta?
+              <Link to="/registrar" className="text-[#366EFF] ml-2 font-medium">
+                registrate
+              </Link>
+            </TypographyP>
+          </div>
+        </form>
+      </Form>
+    </div>
+  );
 };

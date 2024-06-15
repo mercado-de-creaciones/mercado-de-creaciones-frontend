@@ -34,98 +34,93 @@ export const Login = () => {
 	});
 
 	const { loginMutation } = useLoginMutation();
-	console.log(loginMutation.data);
-	console.log(loginMutation.error?.message);
 
 	async function onSubmit(values: z.infer<typeof loginSchema>) {
 		loginMutation.mutateAsync(values);
 	}
 
 	return (
-		<div className='w-full p-4 sm:px-8 sm:py-5 flex flex-col gap-4'>
-			<TypographyH2 className='uppercase text-center'>Login</TypographyH2>
+    <div className="w-full p-4 sm:px-8 sm:py-5 flex flex-col gap-4">
+      <TypographyH2 className="uppercase text-center">
+        Inicia sesión
+      </TypographyH2>
+      <TypographyP className="text-center">
+        Inicia sesión y administra tus productos
+      </TypographyP>
 
-			<Form {...form}>
-				<form
-					onSubmit={form.handleSubmit(onSubmit)}
-					className='flex flex-col gap-4'>
-					<FormField
-						control={form.control}
-						name='email'
-						render={({ field, formState: { errors } }) => (
-							<FormItem>
-								<FormLabel>Correo</FormLabel>
-								<FormControl>
-									<Input
-										placeholder='example@gmail.com'
-										className={`border ${
-											errors.email?.message
-												? 'border-red-500'
-												: 'border-blue-600'
-										}`}
-										{...field}
-									/>
-								</FormControl>
-								<FormMessage />
-							</FormItem>
-						)}
-					/>
+      <Form {...form}>
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="flex flex-col gap-4"
+        >
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field, formState: { errors } }) => (
+              <FormItem>
+                <FormLabel>Correo</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder="example@gmail.com"
+                    className={`border ${
+                      errors.email?.message
+                        ? "border-red-500"
+                        : "border-blue-600"
+                    }`}
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
-					<FormField
-						control={form.control}
-						name='password'
-						render={({ field, formState: { errors } }) => (
-							<FormItem>
-								<FormLabel>Contraseña</FormLabel>
-								<FormControl>
-									<Input
-										placeholder='**********'
-										className={`border ${
-											errors.email?.message
-												? 'border-red-500'
-												: 'border-blue-600'
-										}`}
-										{...field}
-									/>
-								</FormControl>
-								<FormMessage>
-									{loginMutation.error && loginMutation.error.message}
-								</FormMessage>
-							</FormItem>
-						)}
-					/>
+          <FormField
+            control={form.control}
+            name="password"
+            render={({ field, formState: { errors } }) => (
+              <FormItem>
+                <FormLabel>Contraseña</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder="**********"
+                    className={`border ${
+                      errors.email?.message
+                        ? "border-red-500"
+                        : "border-blue-600"
+                    }`}
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage>
+                  {loginMutation.error && loginMutation.error.message}
+                </FormMessage>
+              </FormItem>
+            )}
+          />
 
-					<Link
-						to='/auth/olvide-password'
-						className='text-[#366EFF] text-sm'>
-						¿Olvidaste tu contraseña?
-					</Link>
+          <Link to="/olvide-password" className="text-[#366EFF] text-md">
+            ¿Olvidaste tu contraseña?
+          </Link>
 
-					<Button
-						type='submit'
-						variant='gradient'
-						className='w-full'>
-						Ingresar
-					</Button>
+          <Button type="submit" variant="gradient" className="w-full">
+            Ingresar
+          </Button>
 
-					<Divider />
+          <Divider />
 
-					<ButtonWithIcon
-						type='button'
-						className='hidden'>
-						<Google className='w-5 h-5' /> Ingresar
-					</ButtonWithIcon>
+          <ButtonWithIcon type="button" className="hidden">
+            <Google className="w-5 h-5" /> Ingresar
+          </ButtonWithIcon>
 
-					<TypographyP className='text-sm'>
-						¿No tienes cuenta?
-						<Link
-							to='/registrar'
-							className='text-[#366EFF] ml-2 font-medium'>
-							registrate
-						</Link>
-					</TypographyP>
-				</form>
-			</Form>
-		</div>
-	);
+          <TypographyP className="text-md">
+            ¿No tienes cuenta?
+            <Link to="/registrar" className="text-[#366EFF] ml-2 font-medium">
+              registrate
+            </Link>
+          </TypographyP>
+        </form>
+      </Form>
+    </div>
+  );
 };
