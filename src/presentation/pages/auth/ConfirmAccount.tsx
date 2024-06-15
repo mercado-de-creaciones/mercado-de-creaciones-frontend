@@ -1,12 +1,17 @@
 import {
-	TypographyH2,
-	TypographyP,
-} from '@/presentation/components/typography';
-import { CheckCircle2Icon } from 'lucide-react';
-import { Link } from 'react-router-dom';
+  TypographyH2,
+  TypographyP,
+} from "@/presentation/components/typography";
+import { useConfirmAccount } from "@/presentation/hooks";
+
+import { CheckCircle2Icon, Loader } from "lucide-react";
+import { Link, useParams } from "react-router-dom";
 
 export const ConfirmAccount = () => {
-	return (
+  const params = useParams();
+  const { queryConfirmAccount } = useConfirmAccount(params.id as string);
+
+  return (
     <div className="flex flex-col gap-4 p-4 sm:px-8 sm:py-5 ">
       <header className="flex flex-col gap-2">
         <TypographyH2 className="text-center">
@@ -18,12 +23,22 @@ export const ConfirmAccount = () => {
         </TypographyP>
       </header>
 
-      <div className="bg-green-200 border-l-4 border-green-500 p-3 flex items-center gap-2 text-green-500">
-        <CheckCircle2Icon />
+      {queryConfirmAccount.isLoading && (
+        <div className="bg-blue-200 border-l-4 border-blue-500 p-3 flex items-center gap-2 text-blue-500">
+          <Loader />
 
-        <TypographyP>Usuario confirmado correctamente</TypographyP>
-      </div>
+          <TypographyP>Validando cuenta...</TypographyP>
+        </div>
+      )}
 
+      {queryConfirmAccount.data && (
+        <div className="bg-green-200 border-l-4 border-green-500 p-3 flex items-center gap-2 text-green-500">
+          <CheckCircle2Icon />
+
+          <TypographyP>Usuario confirmado correctamente</TypographyP>
+        </div>
+      )}
+      
       <Link
         to="/"
         type="submit"

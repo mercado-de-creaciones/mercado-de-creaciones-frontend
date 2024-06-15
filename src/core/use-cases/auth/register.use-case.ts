@@ -1,9 +1,8 @@
 import { HttpAdapter } from "@/config/adapters/http/http.adapter";
-import { AuthResponse } from "@/infrastructure/interfaces/user.response";
-import { AuthMapper } from "@/infrastructure/mappers/auth.mapper";
+import { MessageResponse } from "@/infrastructure/interfaces/api.responses";
 
-export const registerUserUseCase = async (fetcher: HttpAdapter, body: Record<string,string>): Promise<string> => {
-	const register = await fetcher.post<AuthResponse>("/auth/register", body);
+export const registerUserUseCase = async (fetcher: HttpAdapter, body: Record<string,string>): Promise<MessageResponse> => {
+	const register = await fetcher.post<MessageResponse>("/auth/register", body);
 
-	return AuthMapper.fromAuthResponseToToken(register);
+	return register;
 }

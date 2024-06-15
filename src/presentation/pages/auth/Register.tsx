@@ -1,7 +1,4 @@
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
-import { z } from 'zod';
+import { useRegisterMutation } from '@/presentation/hooks';
 
 import {
 	Form,
@@ -11,15 +8,20 @@ import {
 	FormLabel,
 	FormMessage,
 } from '@/presentation/components/ui/form';
-
 import { Input } from '@/presentation/components/ui/input';
 import { Button } from '@/presentation/components/ui/button';
-import { registerSchema } from '@/presentation/validations/userSchema';
 import {
 	TypographyH2,
 	TypographyP,
 } from '@/presentation/components/typography';
-import { useRegisterMutation } from '@/presentation/hooks/auth/useRegisterMutation';
+import { registerSchema } from '@/presentation/validations/userSchema';
+
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
+import { z } from "zod";
+import { MailCheck } from 'lucide-react';
+import { Alert, AlertTitle } from '@/presentation/components/ui/alert';
 
 export const Register = () => {
 	const form = useForm<z.infer<typeof registerSchema>>({
@@ -45,6 +47,13 @@ export const Register = () => {
       <TypographyP className="text-center">
         Crea tu cuenta y administra tus productos
       </TypographyP>
+
+      {registerMutation.data && (
+        <Alert variant="success">
+          <MailCheck />
+          <AlertTitle className="ml-2">{registerMutation.data.message}</AlertTitle>
+        </Alert>
+      )}
 
       <Form {...form}>
         <form
@@ -103,6 +112,7 @@ export const Register = () => {
                 <FormLabel>Contraseña</FormLabel>
                 <FormControl>
                   <Input
+                    type="password"
                     placeholder="**********"
                     className={`border ${
                       errors.password?.message
