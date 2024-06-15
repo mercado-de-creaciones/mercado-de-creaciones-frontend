@@ -7,43 +7,64 @@ import { ResetPassword } from "../pages/auth/ResetPassword";
 import { NewPassword } from "../pages/auth/NewPassword";
 import { ConfirmAccount } from "../pages/auth/ConfirmAccount";
 
+import { HomeLayout } from "../layouts/HomeLayout";
+import { Home } from "../pages/home/Home";
+
 const authRoutes = [
   {
-    to: "/",
+    to: "/auth",
     component: <Login />,
   },
   {
-    to: "/registrar",
+    to: "/auth/registrar",
     component: <Register />,
   },
   {
-    to: "/olvide-password",
+    to: "/auth/olvide-password",
     component: <ResetPassword />,
   },
   {
-    to: "/olvide-password/:token",
+    to: "/auth/olvide-password/:token",
     component: <NewPassword />,
   },
   {
-    to: "/confirmar/:id",
+    to: "/auth/confirmar/:id",
     component: <ConfirmAccount />,
   },
+];
+
+const homeRoutes = [
+  {
+    to: "/",
+    component: <Home />,
+  },
+
 ];
 
 export const router = createBrowserRouter([
   {
     path: "/",
+    element: <HomeLayout />,
+    children: [
+      ...homeRoutes.map((route) => ({
+        path: route.to,
+        element: route.component,
+      })),
+      {
+        index: true,
+        path: homeRoutes.at(0)?.to,
+        element: homeRoutes.at(0)?.component,
+      },
+    ],
+  },
+  {
+    path: "/auth",
     element: <AuthLayout />,
     children: [
       ...authRoutes.map((route) => ({
         path: route.to,
         element: route.component,
       })),
-      {
-        index: true,
-        path: authRoutes.at(0)?.to,
-        element: authRoutes.at(0)?.component,
-      },
     ],
   },
 ]);

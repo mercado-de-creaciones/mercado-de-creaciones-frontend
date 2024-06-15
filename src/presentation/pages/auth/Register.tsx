@@ -10,10 +10,7 @@ import {
 } from '@/presentation/components/ui/form';
 import { Input } from '@/presentation/components/ui/input';
 import { Button } from '@/presentation/components/ui/button';
-import {
-	TypographyH2,
-	TypographyP,
-} from '@/presentation/components/typography';
+import { TypographyH2, TypographyP } from "@/presentation/components/shared";
 import { registerSchema } from '@/presentation/validations/userSchema';
 
 import { zodResolver } from "@hookform/resolvers/zod";

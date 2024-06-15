@@ -15,10 +15,7 @@ import { ButtonWithIcon, Divider } from '@/presentation/components/shared';
 import { Input } from '@/presentation/components/ui/input';
 import { Button } from '@/presentation/components/ui/button';
 import Google from '@/presentation/components/icons/Google';
-import {
-	TypographyH2,
-	TypographyP,
-} from '@/presentation/components/typography';
+import { TypographyH2, TypographyP } from "@/presentation/components/shared";
 
 import { loginSchema } from '@/presentation/validations/userSchema';
 import { useLoginMutation } from '@/presentation/hooks';

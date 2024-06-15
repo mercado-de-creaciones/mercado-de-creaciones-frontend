@@ -17,7 +17,15 @@ module.exports = {
       },
     },
     extend: {
+      aspectRatio: {
+        '7/12': '7 / 12',
+      },
       colors: {
+        home: {
+          50: "rgba(255, 245, 233, 1)",
+          75: "rgba(255, 204, 141, 1)",
+          100: "rgba(255, 169, 64, 1)"
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

@@ -23,7 +23,7 @@ export const useLoginMutation = () => {
     }
 
     if (token) {
-      navitation("/home");
+      navitation("/");
     }
   }, [loginMutation.data, token, saveToken, navitation]);
 
