@@ -1,37 +1,43 @@
-import {
-	TypographyH2,
-	TypographyP,
-} from '@/presentation/components/typography';
-import { Button } from '@/presentation/components/ui/button';
+import { useResetPasswordMutation } from "@/presentation/hooks";
 
 import {
-	Form,
-	FormControl,
-	FormField,
-	FormItem,
-	FormLabel,
-	FormMessage,
-} from '@/presentation/components/ui/form';
-import { Input } from '@/presentation/components/ui/input';
-import { resetPasswordSchema } from '@/presentation/validations/userSchema';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
-import { z } from 'zod';
+  TypographyH2,
+  TypographyP,
+} from "@/presentation/components/typography";
+import { Button } from "@/presentation/components/ui/button";
+
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/presentation/components/ui/form";
+import { Input } from "@/presentation/components/ui/input";
+import { resetPasswordSchema } from "@/presentation/validations/userSchema";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
+import { z } from "zod";
+import { AlertCircle, LucideMailCheck } from "lucide-react";
+import { Alert, AlertTitle } from "@/presentation/components/ui/alert";
 
 export const ResetPassword = () => {
-	const form = useForm<z.infer<typeof resetPasswordSchema>>({
-		resolver: zodResolver(resetPasswordSchema),
-		defaultValues: {
-			email: '',
-		},
-	});
+  const form = useForm<z.infer<typeof resetPasswordSchema>>({
+    resolver: zodResolver(resetPasswordSchema),
+    defaultValues: {
+      email: "",
+    },
+  });
 
-	const onSubmit = (values: z.infer<typeof resetPasswordSchema>) => {
-		console.log(values);
-	};
+  const resetPasswordMutation = useResetPasswordMutation();
 
-	return (
+  const onSubmit = (values: z.infer<typeof resetPasswordSchema>) => {
+    resetPasswordMutation.mutate(values);
+  };
+
+  return (
     <div className="flex flex-col gap-4 p-4 sm:px-8 sm:py-5 ">
       <header>
         <TypographyH2 className="uppercase text-center">
@@ -41,6 +47,28 @@ export const ResetPassword = () => {
           Recupera tu cuenta para acceder a tus productos
         </TypographyP>
       </header>
+
+      {resetPasswordMutation.data && (
+        <Alert variant="success" className="flex items-center gap-3 py-2">
+          <span>
+            <LucideMailCheck />
+          </span>
+          <AlertTitle className="m-0">
+            {resetPasswordMutation.data.message}
+          </AlertTitle>
+        </Alert>
+      )}
+
+      {resetPasswordMutation.error && (
+        <Alert variant="destructive" className="flex items-center gap-3 py-2">
+          <span>
+            <AlertCircle />
+          </span>
+          <AlertTitle className="m-0">
+            {resetPasswordMutation.error.message}
+          </AlertTitle>
+        </Alert>
+      )}
 
       <Form {...form}>
         <form
