@@ -1,4 +1,4 @@
-import { Slider } from "@/presentation/components/shared/slider"
+import { Slider } from "@/presentation/components/ui/slider"
 import { useState } from "react"
 
 const PriceSliderRadio = () => {
@@ -7,7 +7,7 @@ const PriceSliderRadio = () => {
   const handleChange = (newValues: number[]) => {
     setValues(newValues);
   }
-  
+
 
   return (
     <div className="mt-[6px] mb-8 ml-[26px] font-medium text-[#333333]">

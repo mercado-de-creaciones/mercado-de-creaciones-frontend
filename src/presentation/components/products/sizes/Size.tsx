@@ -1,16 +1,15 @@
 import { useState } from "react"
-
 interface SizeProp {
   size: string;
 }
 
-const Size = ({size}: SizeProp) => {
+const Size = ({ size }: SizeProp) => {
   const [isSizeActive, setIsSizeActive] = useState(false);
 
   const handleClickActive = () => {
     setIsSizeActive(!isSizeActive)
   }
-  
+
 
   return (
     <>

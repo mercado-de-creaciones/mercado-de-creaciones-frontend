@@ -2,25 +2,27 @@ import { useEffect, useState } from "react";
 import Card from "./Card";
 import axios from "axios";
 import { Product } from "@/infrastructure/interfaces/products.response";
+import { useMediaQuery } from "@/presentation/hooks/use-media-query";
 
 const Cards = () => {
   const [products, setProducts] = useState<Product[]>([]);
+  const mobile = useMediaQuery("(max-width: 768px)");
 
   const getProducts = async () => {
-    const {data} = await axios("./src/presentation/components/products/products.json");
-    setProducts(data);    
+    const { data } = await axios("./src/presentation/components/products/products.json");
+    setProducts(data);
   }
-    
+
 
   useEffect(() => {
     getProducts();
   }, []);
   return (
-    <div className="mt-6 flex flex-wrap gap-10 justify-center">
+    <div className={`${mobile ? "mt-36" : "mt-6"} flex flex-wrap gap-10 justify-center`}>
       {
         products.map(product => {
           return (
-            <Card key={product.id} product={product}/>
+            <Card key={product.id} product={product} />
           )
         })
       }

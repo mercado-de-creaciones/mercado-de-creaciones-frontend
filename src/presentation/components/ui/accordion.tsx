@@ -8,8 +8,8 @@ const Accordion = AccordionPrimitive.Root
 
 const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
-  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item> & {borderBotton?: boolean}
->(({ className, borderBotton=true, ...props }, ref) => (
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item> & { borderBotton?: boolean }
+>(({ className, borderBotton = true, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
     className={cn(`${borderBotton && "border-b"}`, className)}
@@ -40,20 +40,20 @@ type AccordionTriggerProps = {
 
 
 const AccordionTrigger = React.forwardRef<
-React.ElementRef<typeof AccordionPrimitive.Trigger>,
-React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger> & AccordionTriggerProps
->(({ className, children, hiddenArrow= false, arrowRotation=180, arrowDirection="up", ...props }, ref) => {
+  React.ElementRef<typeof AccordionPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger> & AccordionTriggerProps
+>(({ className, children, hiddenArrow = false, arrowRotation = 180, arrowDirection = "up", ...props }, ref) => {
   const ArrowIcon = arrowDirections[arrowDirection];
 
   return (
-    <AccordionPrimitive.Header className="flex justify-center">
+    <AccordionPrimitive.Header className="flex">
       <AccordionPrimitive.Trigger
         ref={ref}
         className={cn(
           `flex-1 items-center justify-between flex py-4 font-medium transition-all
-          ${arrowRotation == 180 
+          ${arrowRotation == 180
             ?
-             "[&[data-state=open]>svg]:rotate-180"
+            "[&[data-state=open]>svg]:rotate-180"
             :
             "[&[data-state=open]>svg]:rotate-90"
           }`,
@@ -62,8 +62,8 @@ React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger> & AccordionTri
         {...props}
       >
         {children}
-          <ArrowIcon className={`${hiddenArrow ? "w-0" : "w-[23px]"} overflow-hidden shrink-0 transition-transform duration-200`} />
-            
+        <ArrowIcon className={`${hiddenArrow ? "w-0" : "w-[23px]"} overflow-hidden shrink-0 transition-transform duration-200`} />
+
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   )
