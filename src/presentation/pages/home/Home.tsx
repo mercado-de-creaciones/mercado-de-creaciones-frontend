@@ -4,7 +4,7 @@ import {
   TypographyH3,
   TypographyH4,
   TypographyP,
-} from "@/presentation/components/shared/";
+} from "@/presentation/components/shared";
 import { Button } from "@/presentation/components/ui/button";
 import { HomeCarousel } from "@/presentation/components/home/simpleCarousel/HomeCarousel";
 import { CoverflowCarousel } from "@/presentation/components/home/coverflowCarousel/CoverflowCarousel";
