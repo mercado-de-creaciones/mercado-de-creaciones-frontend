@@ -5,7 +5,7 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/presentation/components/ui/carousel"
-import { CarouselCard } from "./CarouselCard"
+// import { CarouselCard } from "./CarouselCard"
 
 
 export const HomeCarousel = () => {
@@ -14,19 +14,19 @@ export const HomeCarousel = () => {
             <Carousel>
                 <CarouselContent>
                     <CarouselItem className="lg:basis-1/2 basis-full">
-                        <CarouselCard />
+                        {/* <CarouselCard /> */}
 
                     </CarouselItem>
                     <CarouselItem className="lg:basis-1/2 basis-full">
-                        <CarouselCard />
+                        {/* <CarouselCard /> */}
 
                     </CarouselItem>
                     <CarouselItem className="lg:basis-1/2 basis-full">
-                        <CarouselCard />
+                        {/* <CarouselCard /> */}
 
                     </CarouselItem>
                     <CarouselItem className="lg:basis-1/2 basis-full">
-                        <CarouselCard />
+                        {/* <CarouselCard /> */}
                     </CarouselItem>
                 </CarouselContent>
                 <CarouselPrevious />
