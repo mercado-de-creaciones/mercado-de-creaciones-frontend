@@ -56,8 +56,8 @@ export const AvatarMenu = ({ user, logout }: Props) => {
             Menú de usuario
           </DropdownMenuLabel>
 
-          <DropdownMenuGroup className="absolute bottom-3 w-[90%] bg-white border rounded-md shadow-md p-4 hidden">
-            <DropdownMenuItem className="text-md cursor-pointer">
+          <DropdownMenuGroup className="absolute bottom-3 w-[90%] bg-white border rounded-md shadow-md p-4">
+            <DropdownMenuItem className="text-md cursor-pointer hidden">
               <SquarePen className="mr-2 h-5 w-5 text-light-blue" />
               <span className="text-slate-800">Editar perfil</span>
             </DropdownMenuItem>
@@ -69,7 +69,10 @@ export const AvatarMenu = ({ user, logout }: Props) => {
             </DropdownMenuItem>
             <DropdownMenuSeparator className="bg-gray-300 mx-auto" />
 
-            <DropdownMenuItem className="text-md cursor-pointer" onClick={() => logout()}>
+            <DropdownMenuItem
+              className="text-md cursor-pointer"
+              onClick={() => logout()}
+            >
               <LogOut className="mr-2 h-5 w-5 text-light-blue" />
               <span className="text-slate-800">Cerrar sesión</span>
             </DropdownMenuItem>
