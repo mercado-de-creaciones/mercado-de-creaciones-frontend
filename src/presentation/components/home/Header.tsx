@@ -1,26 +1,33 @@
-import { useLoginMutation } from "@/presentation/hooks";
+import { useLoginMutation, useProfile } from "@/presentation/hooks";
+
+import { buttonVariants } from "../ui/button";
+import { AvatarMenu } from "./AvatarMenu";
 
 import { NavLink } from "react-router-dom";
-import { buttonVariants } from "../ui/button";
-import { TypographyH4 } from "../shared";
 
 export const Header = () => {
-  const { token } = useLoginMutation();
+  const { token,logout } = useLoginMutation();
+
+  const { queryProfile } = useProfile(token!);
   return (
-    <header className="bg-white flex justify-between items-center p-2">
-      <p>Logo</p>
-      <div className="flex gap-3">
-        <NavLink to="/" className={buttonVariants({ variant: "link" })}>
-          Home
-        </NavLink>
-        <NavLink to="/" className={buttonVariants({ variant: "link" })}>
-          Categorias
-        </NavLink>
-        <NavLink to="/" className={buttonVariants({ variant: "link" })}>
-          Sobre nosotros
-        </NavLink>
+    <header className="bg-white flex justify-between items-center py-2 px-8">
+      <img src="/logo.svg" alt="Logo" />
+
+      <div className="flex gap-6">
+        <nav className="flex">
+          <NavLink to="/" className={buttonVariants({ variant: "link" })}>
+            Home
+          </NavLink>
+          <NavLink to="/" className={buttonVariants({ variant: "link" })}>
+            Categorias
+          </NavLink>
+          <NavLink to="/" className={buttonVariants({ variant: "link" })}>
+            Sobre nosotros
+          </NavLink>
+        </nav>
+
         {token ? (
-          <TypographyH4 className="flex items-center text-sky-700">Usuario Autenticado</TypographyH4>
+          <AvatarMenu user={queryProfile.data!} logout={logout} />
         ) : (
           <>
             <NavLink

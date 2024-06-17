@@ -27,5 +27,9 @@ export const useLoginMutation = () => {
     }
   }, [loginMutation.data, token, saveToken, navitation]);
 
-  return { loginMutation, token };
+  const logout = () => {
+    saveToken(null);
+  }
+
+  return { loginMutation, token, logout };
 };

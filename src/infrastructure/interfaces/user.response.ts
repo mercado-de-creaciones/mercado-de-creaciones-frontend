@@ -11,3 +11,9 @@ export interface UserResponse {
   role: string[];
   img: string | null;
 }
+
+export interface ProfileResponse extends UserResponse {
+  createdAt: string;
+  updatedAt: string;
+}
+
