@@ -20,8 +20,9 @@ const SearchProduct = ({ isActiveCollapsible = true, setIsActiveCollapsible }: S
   }, [isActiveCollapsible]);
 
   return (
-    <div className={`${isActiveCollapsible && !mobile ? "w-[38px] cursor-pointer ml-[9px]" : !mobile && "w-full "} mt-6 p-2 flex overflow-hidden
-      duration-300 border border-[#3F3D56] rounded-[8px]`} onClick={handleClick}>
+    <div className={`${isActiveCollapsible && !mobile ? "w-[38px] cursor-pointer p-2 mt-6 ml-[9px]" : !mobile && "w-full ml-[9x] mt-6 p-2"}
+${isActiveCollapsible && mobile ? "h-0" : mobile && "h-[42px] mt-6 p-2"} flex overflow-hidden
+      duration-300 border border-[#3F3D56] rounded-[8px] `} onClick={handleClick}>
       <Search color="#3F3D56" />
       <input ref={inputRef} className={`${isActiveCollapsible && !mobile ? "w-0" : "w-full ml-2"}
       overflow-hidden duration-300 outline-none`} type="text"

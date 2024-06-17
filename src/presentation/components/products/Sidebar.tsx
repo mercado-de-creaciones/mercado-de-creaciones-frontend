@@ -30,7 +30,7 @@ const Sidebar = ({ isActiveCollapsible = true, setIsActiveCollapsible }: MenuPro
                 src={mobile ? IconFilterMobile : IconFilter} alt="icon filter" onClick={() => mobile && setIsActiveCollapsible(!isActiveCollapsible)} />
             </div>
 
-            <div className={`${!isActiveCollapsible && mobile ? "h-auto max-h-[76vh] overflow-y-auto" :
+            <div className={`${!isActiveCollapsible && mobile ? "w-full max-h-[75vh] overflow-y-visible" :
               (mobile) ? "h-0" : ""} overflow-hidden duration-300`}>
               <SearchProduct isActiveCollapsible={isActiveCollapsible} setIsActiveCollapsible={setIsActiveCollapsible} />
 
@@ -51,7 +51,7 @@ const Sidebar = ({ isActiveCollapsible = true, setIsActiveCollapsible }: MenuPro
             className={`${isActiveCollapsible ? "rotate-[180deg]" : "rotate-[360deg]"} transform duration-600 
           cursor-pointer h-[30px] w-[9px] m-3`} />
         </div>
-      </div>
+      </div >
 
     </section >
   )
