@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/presentation/components/ui/card"
-import { TypographyP } from "../../shared/typography/TypographyP"
+import { TypographyP } from "../../shared"
 
 export const CarouselCard = () => {
     return (
