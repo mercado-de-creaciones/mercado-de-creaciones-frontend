@@ -1,8 +1,7 @@
-
-import { TypographyH1 } from "@/presentation/components/shared/typography/TypographyH1";
-import { TypographyH3 } from "@/presentation/components/shared/typography/TypographyH3";
-import { TypographyH4 } from "@/presentation/components/shared/typography/TypographyH4";
-import { TypographyP } from "@/presentation/components/shared/typography/TypographyP";
+import { TypographyH1 } from "@/presentation/components/shared/TypographyH1";
+import { TypographyH3 } from "@/presentation/components/shared/TypographyH3";
+import { TypographyH4 } from "@/presentation/components/shared/TypographyH4";
+import { TypographyP } from "@/presentation/components/shared/TypographyP";
 import { Button } from "@/presentation/components/ui/button";
 import { HomeCarousel } from "@/presentation/components/home/simpleCarousel/HomeCarousel";
 import { CoverflowCarousel } from "@/presentation/components/home/coverflowCarousel/CoverflowCarousel";
@@ -10,9 +9,7 @@ import { CoverflowCarousel } from "@/presentation/components/home/coverflowCarou
 import home from "/home-image.png";
 import paws from "/home-paws.png";
 
-
 export const Home = () => {
-
   return (
     <div className="sm:h-fit bg-home-50 md:px-24 px-8 z-0">
       <div className="h-dvh w-full flex justify-around content-center items-center flex-wrap sm:flex-nowrap">

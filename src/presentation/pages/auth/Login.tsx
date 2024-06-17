@@ -1,46 +1,44 @@
-import { zodResolver } from '@hookform/resolvers/zod';
-import { Link } from 'react-router-dom';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
-import { TypographyH2 } from "@/presentation/components/shared/typography/TypographyH2";
-import { TypographyP } from "@/presentation/components/shared/typography/TypographyP";
+import { TypographyH2 } from "@/presentation/components/shared/TypographyH2";
+import { TypographyP } from "@/presentation/components/shared/TypographyP";
 import { Divider } from "@/presentation/components/shared/Divider";
 import { ButtonWithIcon } from "@/presentation/components/shared/ButtonWithIcon";
 
 import {
-	Form,
-	FormControl,
-	FormField,
-	FormItem,
-	FormLabel,
-	FormMessage,
-} from '@/presentation/components/ui/form';
-import { Input } from '@/presentation/components/ui/input';
-import { Button } from '@/presentation/components/ui/button';
-import Google from '@/presentation/components/icons/Google';
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/presentation/components/ui/form";
+import { Input } from "@/presentation/components/ui/input";
+import { Button } from "@/presentation/components/ui/button";
+import Google from "@/presentation/components/icons/Google";
 
-import { loginSchema } from '@/presentation/validations/userSchema';
-import { useLoginMutation } from '@/presentation/hooks';
-
-
+import { loginSchema } from "@/presentation/validations/userSchema";
+import { useLoginMutation } from "@/presentation/hooks";
 
 export const Login = () => {
-	const form = useForm<z.infer<typeof loginSchema>>({
-		resolver: zodResolver(loginSchema),
-		defaultValues: {
-			email: '',
-			password: '',
-		},
-	});
+  const form = useForm<z.infer<typeof loginSchema>>({
+    resolver: zodResolver(loginSchema),
+    defaultValues: {
+      email: "",
+      password: "",
+    },
+  });
 
-	const { loginMutation } = useLoginMutation();
+  const { loginMutation } = useLoginMutation();
 
-	async function onSubmit(values: z.infer<typeof loginSchema>) {
-		loginMutation.mutateAsync(values);
-	}
+  async function onSubmit(values: z.infer<typeof loginSchema>) {
+    loginMutation.mutateAsync(values);
+  }
 
-	return (
+  return (
     <div className="w-full p-4 sm:px-8 sm:py-5 flex flex-col gap-4">
       <TypographyH2 className="uppercase text-center">
         Inicia sesión
@@ -116,7 +114,10 @@ export const Login = () => {
 
           <TypographyP className="text-md">
             ¿No tienes cuenta?
-            <Link to="/auth/registrar" className="text-[#366EFF] ml-2 font-medium">
+            <Link
+              to="/auth/registrar"
+              className="text-[#366EFF] ml-2 font-medium"
+            >
               Crea una
             </Link>
           </TypographyP>

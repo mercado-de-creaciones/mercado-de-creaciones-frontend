@@ -1,5 +1,5 @@
-import { TypographyH2 } from '../../components/shared/typography/TypographyH2';
-import { TypographyP } from '../../components/shared/typography/TypographyP';
+import { TypographyH2 } from "@/presentation/components/shared/TypographyH2";
+import { TypographyP } from "@/presentation/components/shared/TypographyP";
 
 import { useConfirmAccount } from "@/presentation/hooks";
 
@@ -37,7 +37,7 @@ export const ConfirmAccount = () => {
           <TypographyP>Usuario confirmado correctamente</TypographyP>
         </div>
       )}
-      
+
       <Link
         to="/"
         type="submit"

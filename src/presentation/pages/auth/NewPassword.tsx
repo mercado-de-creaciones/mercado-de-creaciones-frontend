@@ -3,8 +3,8 @@ import {
   useCheckUserToken,
 } from "@/presentation/hooks";
 
-import { TypographyH2 } from "@/presentation/components/shared/typography/TypographyH2";
-import { TypographyP } from "@/presentation/components/shared/typography/TypographyP";
+import { TypographyH2 } from "@/presentation/components/shared/TypographyH2";
+import { TypographyP } from "@/presentation/components/shared/TypographyP";
 
 import { Button } from "@/presentation/components/ui/button";
 import {
@@ -25,7 +25,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { UserCheck, UserX } from "lucide-react";
-
 
 export const NewPassword = () => {
   const params = useParams();
@@ -66,7 +65,9 @@ export const NewPassword = () => {
           <span>
             <UserCheck />
           </span>
-          <AlertTitle className="m-0">{changePasswordMutation.data.message}</AlertTitle>
+          <AlertTitle className="m-0">
+            {changePasswordMutation.data.message}
+          </AlertTitle>
         </Alert>
       )}
 
@@ -75,7 +76,9 @@ export const NewPassword = () => {
           <span>
             <UserX />
           </span>
-          <AlertTitle className="m-0">{changePasswordMutation.error.message}</AlertTitle>
+          <AlertTitle className="m-0">
+            {changePasswordMutation.error.message}
+          </AlertTitle>
         </Alert>
       )}
 
@@ -90,7 +93,9 @@ export const NewPassword = () => {
           <span>
             <UserX />
           </span>
-          <AlertTitle className="m-0">{queryCheckToken.error.message}</AlertTitle>
+          <AlertTitle className="m-0">
+            {queryCheckToken.error.message}
+          </AlertTitle>
         </Alert>
       ) : (
         <Form {...form}>

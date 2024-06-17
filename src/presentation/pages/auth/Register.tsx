@@ -1,44 +1,44 @@
-import { useRegisterMutation } from '@/presentation/hooks';
+import { useRegisterMutation } from "@/presentation/hooks";
 
 import {
-	Form,
-	FormControl,
-	FormField,
-	FormItem,
-	FormLabel,
-	FormMessage,
-} from '@/presentation/components/ui/form';
-import { Input } from '@/presentation/components/ui/input';
-import { Button } from '@/presentation/components/ui/button';
-import { TypographyH2 } from "@/presentation/components/shared/typography/TypographyH2";
-import { TypographyP } from "@/presentation/components/shared/typography/TypographyP";
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/presentation/components/ui/form";
+import { Input } from "@/presentation/components/ui/input";
+import { Button } from "@/presentation/components/ui/button";
+import { TypographyH2 } from "@/presentation/components/shared/TypographyH2";
+import { TypographyP } from "@/presentation/components/shared/TypographyP";
 
-import { registerSchema } from '@/presentation/validations/userSchema';
+import { registerSchema } from "@/presentation/validations/userSchema";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { z } from "zod";
-import { MailCheck } from 'lucide-react';
-import { Alert, AlertTitle } from '@/presentation/components/ui/alert';
+import { MailCheck } from "lucide-react";
+import { Alert, AlertTitle } from "@/presentation/components/ui/alert";
 
 export const Register = () => {
-	const form = useForm<z.infer<typeof registerSchema>>({
-		resolver: zodResolver(registerSchema),
-		defaultValues: {
-			email: '',
-			password: '',
-			name: '',
-		},
-	});
+  const form = useForm<z.infer<typeof registerSchema>>({
+    resolver: zodResolver(registerSchema),
+    defaultValues: {
+      email: "",
+      password: "",
+      name: "",
+    },
+  });
 
-	const { registerMutation } = useRegisterMutation();
+  const { registerMutation } = useRegisterMutation();
 
-	function onSubmit(values: z.infer<typeof registerSchema>) {
-		registerMutation.mutateAsync(values);
-	}
+  function onSubmit(values: z.infer<typeof registerSchema>) {
+    registerMutation.mutateAsync(values);
+  }
 
-	return (
+  return (
     <div className="w-full p-4 sm:p-8 flex flex-col gap-4">
       <TypographyH2 className="uppercase text-center">
         Crea tu cuenta

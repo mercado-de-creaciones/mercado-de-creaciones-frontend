@@ -1,7 +1,7 @@
 import { useResetPasswordMutation } from "@/presentation/hooks";
 
-import { TypographyH2 } from "@/presentation/components/shared/typography/TypographyH2";
-import { TypographyP } from "@/presentation/components/shared/typography/TypographyP";
+import { TypographyH2 } from "@/presentation/components/shared/TypographyH2";
+import { TypographyP } from "@/presentation/components/shared/TypographyP";
 import { Button } from "@/presentation/components/ui/button";
 
 import {
@@ -106,7 +106,10 @@ export const ResetPassword = () => {
           <div className="flex flex-col md:flex-row gap-4 items-center">
             <TypographyP className="text-md text-balance">
               ¿Ya tienes cuenta?
-              <Link to="/auth/login" className="text-[#366EFF] ml-2 font-medium">
+              <Link
+                to="/auth/login"
+                className="text-[#366EFF] ml-2 font-medium"
+              >
                 Inicia sesion
               </Link>
             </TypographyP>
