@@ -1,10 +1,8 @@
 
-import {
-  TypographyH1,
-  TypographyH3,
-  TypographyH4,
-  TypographyP,
-} from "@/presentation/components/shared";
+import { TypographyH1 } from "@/presentation/components/shared/typography/TypographyH1";
+import { TypographyH3 } from "@/presentation/components/shared/typography/TypographyH3";
+import { TypographyH4 } from "@/presentation/components/shared/typography/TypographyH4";
+import { TypographyP } from "@/presentation/components/shared/typography/TypographyP";
 import { Button } from "@/presentation/components/ui/button";
 import { HomeCarousel } from "@/presentation/components/home/simpleCarousel/HomeCarousel";
 import { CoverflowCarousel } from "@/presentation/components/home/coverflowCarousel/CoverflowCarousel";

@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
+import { TypographyH2 } from "@/presentation/components/shared/typography/TypographyH2";
+import { TypographyP } from "@/presentation/components/shared/typography/TypographyP";
+import { Divider } from "@/presentation/components/shared/Divider";
+import { ButtonWithIcon } from "@/presentation/components/shared/ButtonWithIcon";
+
 import {
 	Form,
 	FormControl,
@@ -11,14 +16,13 @@ import {
 	FormLabel,
 	FormMessage,
 } from '@/presentation/components/ui/form';
-import { ButtonWithIcon, Divider } from '@/presentation/components/shared';
 import { Input } from '@/presentation/components/ui/input';
 import { Button } from '@/presentation/components/ui/button';
 import Google from '@/presentation/components/icons/Google';
-import { TypographyH2, TypographyP } from "@/presentation/components/shared";
 
 import { loginSchema } from '@/presentation/validations/userSchema';
 import { useLoginMutation } from '@/presentation/hooks';
+
 
 
 export const Login = () => {

@@ -1,7 +1,6 @@
-import {
-  TypographyH2,
-  TypographyP,
-} from "@/presentation/components/shared";
+import { TypographyH2 } from '../../components/shared/typography/TypographyH2';
+import { TypographyP } from '../../components/shared/typography/TypographyP';
+
 import { useConfirmAccount } from "@/presentation/hooks";
 
 import { CheckCircle2Icon, Loader } from "lucide-react";

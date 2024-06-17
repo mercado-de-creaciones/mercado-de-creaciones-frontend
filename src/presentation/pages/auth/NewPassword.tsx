@@ -3,7 +3,9 @@ import {
   useCheckUserToken,
 } from "@/presentation/hooks";
 
-import { TypographyH2, TypographyP } from "@/presentation/components/shared";
+import { TypographyH2 } from "@/presentation/components/shared/typography/TypographyH2";
+import { TypographyP } from "@/presentation/components/shared/typography/TypographyP";
+
 import { Button } from "@/presentation/components/ui/button";
 import {
   Form,
@@ -23,6 +25,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { UserCheck, UserX } from "lucide-react";
+
 
 export const NewPassword = () => {
   const params = useParams();

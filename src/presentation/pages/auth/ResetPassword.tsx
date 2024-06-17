@@ -1,6 +1,7 @@
 import { useResetPasswordMutation } from "@/presentation/hooks";
 
-import { TypographyH2, TypographyP } from "@/presentation/components/shared";
+import { TypographyH2 } from "@/presentation/components/shared/typography/TypographyH2";
+import { TypographyP } from "@/presentation/components/shared/typography/TypographyP";
 import { Button } from "@/presentation/components/ui/button";
 
 import {
