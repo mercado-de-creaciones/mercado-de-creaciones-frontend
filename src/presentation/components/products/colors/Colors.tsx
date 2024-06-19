@@ -24,7 +24,7 @@ interface ColorsProp {
   setIsActiveCollapsible: (value: boolean) => void;
 }
 
-const Colors = ({ isActiveCollapsible = false, setIsActiveCollapsible }: ColorsProp) => {
+const Colors = ({ isActiveCollapsible = true, setIsActiveCollapsible }: ColorsProp) => {
   const [activeAccordionItem, setActiveAccordionItem] = useState("")
   const mobile = useMediaQuery("(max-width: 768px)");
 

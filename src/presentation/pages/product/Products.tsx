@@ -1,6 +1,6 @@
 import Sidebar from "../../components/products/Sidebar"
-import { useState } from "react";
 import Cards from "@/presentation/components/products/Cards";
+import { useState } from "react";
 import { useMediaQuery } from "@/presentation/hooks/use-media-query";
 
 export const Products = () => {
@@ -9,8 +9,10 @@ export const Products = () => {
 
 
   console.log(mobile, "ahh");
+  // TODO: add skeleton
+  // add react query
+  // add variable global to boolean isActiveCollapsible
 
-  // TODO: fix element mascota se junta
 
   return (
     <>

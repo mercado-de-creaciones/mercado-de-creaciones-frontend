@@ -13,7 +13,7 @@ interface SubCategoriesProp {
   setIsActiveCollapsible: (value: boolean) => void;
 }
 
-const SubCategories = ({ isActiveCollapsible = false, setIsActiveCollapsible }: SubCategoriesProp) => {
+const SubCategories = ({ isActiveCollapsible = true, setIsActiveCollapsible }: SubCategoriesProp) => {
   const [activeAccordionItem, setActiveAccordionItem] = useState("")
   const mobile = useMediaQuery("(max-width: 768px)");
 

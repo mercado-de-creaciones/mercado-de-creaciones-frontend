@@ -25,7 +25,7 @@ interface SizesProp {
 // }
 const sizes = ["XX-Small", "X-Small", "Small", "Medium", "Large", "X-Large", "XX-Large", "3X-Large", "4X-Large"];
 
-const Sizes = ({ isActiveCollapsible = false, setIsActiveCollapsible }: SizesProp) => {
+const Sizes = ({ isActiveCollapsible = true, setIsActiveCollapsible }: SizesProp) => {
   const [activeAccordionItem, setActiveAccordionItem] = useState("")
   const mobile = useMediaQuery("(max-width: 768px)");
 

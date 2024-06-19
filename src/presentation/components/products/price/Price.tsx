@@ -11,7 +11,7 @@ interface PriceProp {
   setIsActiveCollapsible: (value: boolean) => void;
 }
 
-const Price = ({ isActiveCollapsible = false, setIsActiveCollapsible }: PriceProp) => {
+const Price = ({ isActiveCollapsible = true, setIsActiveCollapsible }: PriceProp) => {
   const [activeAccordionItem, setActiveAccordionItem] = useState("")
   const mobile = useMediaQuery("(max-width: 768px)");
 

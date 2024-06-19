@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import Card from "./Card";
 import axios from "axios";
 import { Product } from "@/infrastructure/interfaces/products.response";
 import { useMediaQuery } from "@/presentation/hooks/use-media-query";
+import CardProduct from "./Card";
 
 const Cards = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -22,7 +22,7 @@ const Cards = () => {
       {
         products.map(product => {
           return (
-            <Card key={product.id} product={product} />
+            <CardProduct key={product.id} product={product} />
           )
         })
       }
