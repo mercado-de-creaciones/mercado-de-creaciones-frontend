@@ -4,12 +4,12 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
 import {
-	Form,
-	FormControl,
-	FormField,
-	FormItem,
-	FormLabel,
-	FormMessage,
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
 } from '@/presentation/components/ui/form';
 import { ButtonWithIcon, Divider } from '@/presentation/components/shared';
 import { Input } from '@/presentation/components/ui/input';
@@ -22,21 +22,21 @@ import { useLoginMutation } from '@/presentation/hooks';
 
 
 export const Login = () => {
-	const form = useForm<z.infer<typeof loginSchema>>({
-		resolver: zodResolver(loginSchema),
-		defaultValues: {
-			email: '',
-			password: '',
-		},
-	});
+  const form = useForm<z.infer<typeof loginSchema>>({
+    resolver: zodResolver(loginSchema),
+    defaultValues: {
+      email: '',
+      password: '',
+    },
+  });
 
-	const { loginMutation } = useLoginMutation();
+  const { loginMutation } = useLoginMutation();
 
-	async function onSubmit(values: z.infer<typeof loginSchema>) {
-		loginMutation.mutateAsync(values);
-	}
+  function onSubmit(values: z.infer<typeof loginSchema>) {
+    loginMutation.mutateAsync(values);
+  }
 
-	return (
+  return (
     <div className="w-full p-4 sm:px-8 sm:py-5 flex flex-col gap-4">
       <TypographyH2 className="uppercase text-center">
         Inicia sesión
@@ -59,11 +59,10 @@ export const Login = () => {
                 <FormControl>
                   <Input
                     placeholder="example@gmail.com"
-                    className={`border ${
-                      errors.email?.message
+                    className={`border ${errors.email?.message
                         ? "border-red-500"
                         : "border-blue-600"
-                    }`}
+                      }`}
                     {...field}
                   />
                 </FormControl>
@@ -80,12 +79,12 @@ export const Login = () => {
                 <FormLabel>Contraseña</FormLabel>
                 <FormControl>
                   <Input
+                    type="password"
                     placeholder="*****************"
-                    className={`border ${
-                      errors.email?.message
+                    className={`border ${errors.email?.message
                         ? "border-red-500"
                         : "border-blue-600"
-                    }`}
+                      }`}
                     {...field}
                   />
                 </FormControl>

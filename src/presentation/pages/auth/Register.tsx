@@ -32,8 +32,11 @@ export const Register = () => {
 
 	const { registerMutation } = useRegisterMutation();
 
-	function onSubmit(values: z.infer<typeof registerSchema>) {
-		registerMutation.mutateAsync(values);
+	async function onSubmit(values: z.infer<typeof registerSchema>) {
+		const {message} = await registerMutation.mutateAsync(values);
+    if(message === "Usuario creado correctamente, revisa tu email para confirmar tu cuenta"){
+      form.reset();
+    }
 	}
 
 	return (
