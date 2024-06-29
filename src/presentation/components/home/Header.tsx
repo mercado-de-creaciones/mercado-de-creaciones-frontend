@@ -9,6 +9,7 @@ export const Header = () => {
   const { token,logout } = useLoginMutation();
 
   const { queryProfile } = useProfile(token!);
+  
   return (
     <header className="bg-white flex justify-between items-center py-2 px-8">
       <img src="/logo.svg" alt="Logo" />
@@ -27,7 +28,11 @@ export const Header = () => {
         </nav>
 
         {token ? (
-          <AvatarMenu user={queryProfile.data!} logout={logout} />
+          <AvatarMenu
+            user={queryProfile.data!}
+            isLoading={queryProfile.isLoading}
+            logout={logout}
+          />
         ) : (
           <>
             <NavLink

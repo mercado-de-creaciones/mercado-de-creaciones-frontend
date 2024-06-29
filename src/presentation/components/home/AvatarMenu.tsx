@@ -1,4 +1,4 @@
-import { User } from "@/core/entities/user.entity"
+import { User } from "@/core/entities/user.entity";
 
 import { Button } from "@/presentation/components/ui/button";
 import {
@@ -15,17 +15,25 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "@/presentation/components/ui/avatar";
+import { Skeleton } from "../ui/skeleton";
 
-import { Settings, LogOut, SquarePen, ChevronRight, ChevronDown } from "lucide-react";
+import {
+  Settings,
+  LogOut,
+  SquarePen,
+  ChevronRight,
+  ChevronDown,
+} from "lucide-react";
 import { Formatter } from "@/config/helpers/formatter";
 import { useToggle } from "@uidotdev/usehooks";
 
-interface Props{
+interface Props {
   user: User;
+  isLoading: boolean;
   logout: () => void;
 }
 
-export const AvatarMenu = ({ user, logout }: Props) => {
+export const AvatarMenu = ({ user, isLoading, logout }: Props) => {
   const [isOpen, toggle] = useToggle(false);
 
   return (
@@ -35,13 +43,23 @@ export const AvatarMenu = ({ user, logout }: Props) => {
         className="focus-visible:ring-offset-0 focus-visible:ring-0 w-48"
       >
         <Button className="flex justify-between bg-light-blue hover:bg-light-blue/50 font-semibold">
-          <Avatar>
-            <AvatarImage src={user?.img || ""} alt="Imagen usuario" />
-            <AvatarFallback className="text-slate-800">
-              {Formatter.getInitials(user?.name)}
-            </AvatarFallback>
-          </Avatar>
-          {user?.name}
+          {isLoading ? (
+            <Skeleton className="h-8 w-8 rounded-full" />
+          ) : (
+            <Avatar>
+              <AvatarImage src={user?.img || ""} alt="Imagen usuario" />
+              <AvatarFallback className="text-slate-800">
+                {Formatter.getInitials(user?.name)}
+              </AvatarFallback>
+            </Avatar>
+          )}
+
+          {isLoading ? (
+            <Skeleton className="h-4 w-[84px]" />
+          ) : (
+            <p>{user?.name}</p>
+          )}
+
           {isOpen ? (
             <ChevronDown className="h-5 w-5" />
           ) : (

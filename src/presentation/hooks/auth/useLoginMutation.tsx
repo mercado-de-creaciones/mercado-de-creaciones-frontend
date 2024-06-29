@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import * as UseCases from "../../../core/use-cases";
 import { apiFetcher } from "@/config/adapters/api.adapter";
@@ -8,14 +8,25 @@ import { useLocalStorage } from "@uidotdev/usehooks";
 import { useNavigate } from "react-router-dom";
 
 export const useLoginMutation = () => {
+  const [isLoadingLogin, setisLoadingLogin] = useState(false);
   const navitation = useNavigate();
 
   const loginMutation = useMutation({
     mutationFn: (body: Record<string, string>) =>
       UseCases.loginUserUseCase(apiFetcher, body),
+    onMutate: () => {
+      setisLoadingLogin(true);
+    },
+    onSuccess: () => {
+      setisLoadingLogin(false);
+    },
+    onError: () => {
+      setisLoadingLogin(false);
+    },
   });
 
   const [token, saveToken] = useLocalStorage<string | null>("token", null);
+  
 
   useEffect(() => {
     if (loginMutation.data && !token) {
@@ -31,5 +42,5 @@ export const useLoginMutation = () => {
     saveToken(null);
   }
 
-  return { loginMutation, token, logout };
+  return { loginMutation, token, logout, isLoadingLogin };
 };

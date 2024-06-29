@@ -22,6 +22,7 @@ import Google from "@/presentation/components/icons/Google";
 
 import { loginSchema } from "@/presentation/validations/userSchema";
 import { useLoginMutation } from "@/presentation/hooks";
+import { Spinner } from "@/presentation/components/ui/spinner";
 
 export const Login = () => {
   const form = useForm<z.infer<typeof loginSchema>>({
@@ -32,7 +33,7 @@ export const Login = () => {
     },
   });
 
-  const { loginMutation } = useLoginMutation();
+  const { loginMutation,isLoadingLogin } = useLoginMutation();
 
   async function onSubmit(values: z.infer<typeof loginSchema>) {
     loginMutation.mutateAsync(values);
@@ -102,7 +103,16 @@ export const Login = () => {
             ¿Olvidaste tu contraseña?
           </Link>
 
-          <Button type="submit" variant="gradient" className="w-full">
+          <Button
+            type="submit"
+            variant="gradient"
+            className="w-full flex gap-3 md:text-lg"
+          >
+            <Spinner
+              size="small"
+              show={isLoadingLogin}
+              className="text-slate-300"
+            />
             Ingresar
           </Button>
 
