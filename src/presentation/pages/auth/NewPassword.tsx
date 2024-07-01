@@ -18,6 +18,7 @@ import {
 import { Input } from "@/presentation/components/ui/input";
 import { Alert, AlertTitle } from "@/presentation/components/ui/alert";
 import { Skeleton } from "@/presentation/components/ui/skeleton";
+import { Spinner } from "@/presentation/components/ui/spinner";
 import { newPasswordSchema } from "@/presentation/validations/userSchema";
 
 import { useParams } from "react-router-dom";
@@ -37,7 +38,7 @@ export const NewPassword = () => {
   });
 
   const { queryCheckToken } = useCheckUserToken(params.token as string);
-  const changePasswordMutation = useChangePasswordMutation(
+  const {changePasswordMutation,isLoadingChangePassword} = useChangePasswordMutation(
     params.token as string
   );
 
@@ -45,9 +46,9 @@ export const NewPassword = () => {
     changePasswordMutation.mutate({
       newPassword: values.password,
     });
+
+    form.reset();
   };
-  console.log(changePasswordMutation.data);
-  console.log(changePasswordMutation.error);
 
   return (
     <div className="flex flex-col gap-4 p-4 sm:px-8 sm:py-5 ">
@@ -111,6 +112,7 @@ export const NewPassword = () => {
                   <FormLabel>Nueva contraseña</FormLabel>
                   <FormControl>
                     <Input
+                      type="password"
                       placeholder="************"
                       className={`border ${
                         errors.password?.message
@@ -128,9 +130,17 @@ export const NewPassword = () => {
             <Button
               type="submit"
               variant="blue"
-              className="hover:bg-[#366EFF]/90"
+              className="hover:bg-[#366EFF]/90 w-full flex items-center gap-2 md:text-lg"
+              disabled={changePasswordMutation.isSuccess}
             >
-              Guardar nueva contraseña
+              <Spinner
+                size="small"
+                show={isLoadingChangePassword}
+                className="text-slate-300"
+              />
+              {isLoadingChangePassword
+                ? "Creando nueva contraseña..."
+                : "Guardar nueva contraseña"}
             </Button>
           </form>
         </Form>

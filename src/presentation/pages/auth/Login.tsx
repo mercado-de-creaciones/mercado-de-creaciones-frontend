@@ -83,6 +83,7 @@ export const Login = () => {
                 <FormLabel>Contraseña</FormLabel>
                 <FormControl>
                   <Input
+                    type="password"
                     placeholder="*****************"
                     className={`border ${
                       errors.email?.message
@@ -106,7 +107,7 @@ export const Login = () => {
           <Button
             type="submit"
             variant="gradient"
-            className="w-full flex gap-3 md:text-lg"
+            className="w-full flex gap-2 md:text-lg"
           >
             <Spinner
               size="small"

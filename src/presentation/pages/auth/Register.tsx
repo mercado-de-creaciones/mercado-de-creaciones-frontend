@@ -12,6 +12,8 @@ import { Input } from "@/presentation/components/ui/input";
 import { Button } from "@/presentation/components/ui/button";
 import { TypographyH2 } from "@/presentation/components/shared/TypographyH2";
 import { TypographyP } from "@/presentation/components/shared/TypographyP";
+import { Alert, AlertTitle } from "@/presentation/components/ui/alert";
+import { Spinner } from "@/presentation/components/ui/spinner";
 
 import { registerSchema } from "@/presentation/validations/userSchema";
 
@@ -20,7 +22,6 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { z } from "zod";
 import { MailCheck } from "lucide-react";
-import { Alert, AlertTitle } from "@/presentation/components/ui/alert";
 
 export const Register = () => {
   const form = useForm<z.infer<typeof registerSchema>>({
@@ -32,8 +33,8 @@ export const Register = () => {
     },
   });
 
-  const { registerMutation } = useRegisterMutation();
-
+  const { registerMutation, isLoadingRegister } = useRegisterMutation();
+  
   function onSubmit(values: z.infer<typeof registerSchema>) {
     registerMutation.mutateAsync(values);
   }
@@ -134,8 +135,18 @@ export const Register = () => {
             ¿Olvidaste tu contraseña?
           </Link>
 
-          <Button type="submit" className="w-full" variant="gradient">
-            Registrase
+          <Button
+            type="submit"
+            className="w-full flex items-center gap-2 md:text-lg"
+            variant="gradient"
+            disabled={registerMutation.isSuccess}
+          >
+            <Spinner
+              size="small"
+              show={isLoadingRegister}
+              className="text-slate-300"
+            />
+            {isLoadingRegister ? "Creando cuenta..." : "Registrarse"}
           </Button>
 
           <TypographyP className="text-md">

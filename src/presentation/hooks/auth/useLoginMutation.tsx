@@ -12,8 +12,9 @@ export const useLoginMutation = () => {
   const navitation = useNavigate();
 
   const loginMutation = useMutation({
-    mutationFn: (body: Record<string, string>) =>
-      UseCases.loginUserUseCase(apiFetcher, body),
+    mutationFn: (body: Record<string, string>) => {
+      return  UseCases.loginUserUseCase(apiFetcher, body)
+    },
     onMutate: () => {
       setisLoadingLogin(true);
     },
