@@ -18,7 +18,7 @@ const buttonVariants = cva(
         blue: "bg-blue-600 text-white py-0",
         outlineblue:
           "text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white py-0",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
+        ghost: "bg-transparent",
         link: "text-primary underline-offset-4 hover:underline",
         terceary: "border border-blue-400 text-blue-400 hover:text-blue-400",
         gradient: "bg-gradient-primary py-[22px] rounded-xl text-white text-base",

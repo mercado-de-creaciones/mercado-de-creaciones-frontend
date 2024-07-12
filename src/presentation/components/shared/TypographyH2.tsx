@@ -9,7 +9,7 @@ export const TypographyH2 = ({ children, className }: Props) => {
 	return (
 		<h2
 			className={cn(
-				'tracking-tight text-[#1E1E1E] font-bold text-3xl',
+				'tracking-tight text-[#1E1E1E] font-bold text-3xl lg:text-4xl',
 				className
 			)}>
 			{children}
