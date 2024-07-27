@@ -50,7 +50,7 @@ const CardProduct = ({ product }: CardProduct) => {
       </CardContent>
 
       <CardFooter>
-        <p className="font-bold text-[22px] text-center text-[#FF5A5A] mt-3">${price}</p>
+        <p className="font-bold text-[22px] text-center text-[#FF5A5A] mt-3 w-full">${price}</p>
       </CardFooter>
 
     </Card>

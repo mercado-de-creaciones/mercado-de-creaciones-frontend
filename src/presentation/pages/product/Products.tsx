@@ -8,7 +8,6 @@ export const Products = () => {
   const mobile = useMediaQuery("(max-width: 768px)");
 
 
-  console.log(mobile, "ahh");
   // TODO: add skeleton
   // add react query
   // add variable global to boolean isActiveCollapsible
