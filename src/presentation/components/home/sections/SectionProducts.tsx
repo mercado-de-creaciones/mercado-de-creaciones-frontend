@@ -1,4 +1,4 @@
-import { TypographyH1 } from "../../shared/TypographyH1"
+import { TypographyH2 } from "../../shared/TypographyH2";
 import { TypographyH3 } from "../../shared/TypographyH3"
 import { CoverflowCarousel } from "../coverflowCarousel/CoverflowCarousel"
 
@@ -11,11 +11,11 @@ export const SectionProducts = () => {
 					text-center text-title font-bold">
 					Visita nuestros
 				</TypographyH3>
-				<TypographyH1 
+				<TypographyH2 
 					className="font-bold my-3 leading-snug text-3xl 
 					lg:text-4xl text-center text-home-100">
 					Productos destacados
-				</TypographyH1>
+				</TypographyH2>
 			</header>
 
 			<CoverflowCarousel />

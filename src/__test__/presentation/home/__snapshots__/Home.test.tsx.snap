@@ -1,0 +1,1507 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Pruebas el home page > Debe de renderizar el Home y hacer match con el snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="grid grid-cols-1 place-items-center md:grid-cols-2 w-full"
+  >
+    <article
+      class="lg:max-w-lg md:max-w-sm w-[90%] space-y-3"
+    >
+      <h3
+        class="scroll-m-20 text-xl md:text-2xl tracking-tight text-home-100 font-medium"
+      >
+        Bienvenidos...
+      </h3>
+      <h1
+        class="scroll-m-20 text-3xl md:text-4xl tracking-tight lg:text-5xl font-semibold leading-snug text-title"
+      >
+        Calidez y Comodidad Para 
+        <span
+          class="text-home-100 font-bold leading-snug"
+        >
+          tus amigos peluditos
+        </span>
+      </h1>
+      <p
+        class="text-base sm:text-lg leading-tight text-title"
+      >
+        Descubra la moda ideal para su mascota, asegurándose de que esté cómoda y feliz en cualquier temporada.
+      </p>
+      <button
+        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-home-100 text-white h-10 px-4 py-2"
+      >
+        Ver Categorías
+      </button>
+    </article>
+    <figure
+      class="w-96 lg:w-[30rem] md:py-10"
+    >
+      <img
+        alt="home"
+        class="w-full h-full object-cover"
+        src="/home-image.png"
+      />
+    </figure>
+  </section>
+  <section
+    class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-[30rem_1fr] lg:px-14 place-items-center gap-4"
+  >
+    <article
+      class="xl:pr-8 flex flex-col justify-center gap-4 w-[90%] md:w-full"
+    >
+      <h2
+        class="tracking-tight lg:text-4xl font-bold text-3xl md:text-5xl leading-snug text-title"
+      >
+        Explora
+      </h2>
+      <h3
+        class="scroll-m-20 tracking-tight text-3xl md:text-4xl font-medium text-title"
+      >
+        El mundo de las mascotas y 
+        <span
+          class="text-home-100 font-semibold"
+        >
+          encuentra inspiración en nuestras categorias
+        </span>
+         
+      </h3>
+    </article>
+    <div>
+      Carousel Mock
+    </div>
+  </section>
+  <section
+    class="w-full py-20 space-y-10"
+  >
+    <header
+      class="space-y-1"
+    >
+      <h3
+        class="scroll-m-20 md:text-2xl tracking-tight text-4xl lg:text-5xl text-center text-title font-bold"
+      >
+        Visita nuestros
+      </h3>
+      <h2
+        class="tracking-tight font-bold my-3 text-3xl lg:text-4xl text-center text-home-100"
+      >
+        Productos destacados
+      </h2>
+    </header>
+    <div
+      class="swiper swiper_container swiper-coverflow swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress"
+    >
+      <div
+        class="swiper-wrapper"
+        style="cursor: grab; transition-duration: 0ms; transition-delay: 0ms; transform: translate3d(NaNpx, 0px, 0px);"
+      >
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="0"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="1"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="2"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="3"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="4"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="slider-controler hidden xl:block"
+      >
+        <div
+          class="swiper-button-prev slider-arrow text-title"
+        />
+        <div
+          class="swiper-button-next slider-arrow text-title"
+        />
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`Pruebas el home page > La ruta raiz debe 1`] = `
+<DocumentFragment>
+  <section
+    class="grid grid-cols-1 place-items-center md:grid-cols-2 w-full"
+  >
+    <article
+      class="lg:max-w-lg md:max-w-sm w-[90%] space-y-3"
+    >
+      <h3
+        class="scroll-m-20 text-xl md:text-2xl tracking-tight text-home-100 font-medium"
+      >
+        Bienvenidos...
+      </h3>
+      <h1
+        class="scroll-m-20 text-3xl md:text-4xl tracking-tight lg:text-5xl font-semibold leading-snug text-title"
+      >
+        Calidez y Comodidad Para 
+        <span
+          class="text-home-100 font-bold leading-snug"
+        >
+          tus amigos peluditos
+        </span>
+      </h1>
+      <p
+        class="text-base sm:text-lg leading-tight text-title"
+      >
+        Descubra la moda ideal para su mascota, asegurándose de que esté cómoda y feliz en cualquier temporada.
+      </p>
+      <button
+        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-home-100 text-white h-10 px-4 py-2"
+      >
+        Ver Categorías
+      </button>
+    </article>
+    <figure
+      class="w-96 lg:w-[30rem] md:py-10"
+    >
+      <img
+        alt="home"
+        class="w-full h-full object-cover"
+        src="/home-image.png"
+      />
+    </figure>
+  </section>
+  <section
+    class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-[30rem_1fr] lg:px-14 place-items-center gap-4"
+  >
+    <article
+      class="xl:pr-8 flex flex-col justify-center gap-4 w-[90%] md:w-full"
+    >
+      <h2
+        class="tracking-tight lg:text-4xl font-bold text-3xl md:text-5xl leading-snug text-title"
+      >
+        Explora
+      </h2>
+      <h3
+        class="scroll-m-20 tracking-tight text-3xl md:text-4xl font-medium text-title"
+      >
+        El mundo de las mascotas y 
+        <span
+          class="text-home-100 font-semibold"
+        >
+          encuentra inspiración en nuestras categorias
+        </span>
+         
+      </h3>
+    </article>
+    <div>
+      Carousel Mock
+    </div>
+  </section>
+  <section
+    class="w-full py-20 space-y-10"
+  >
+    <header
+      class="space-y-1"
+    >
+      <h3
+        class="scroll-m-20 md:text-2xl tracking-tight text-4xl lg:text-5xl text-center text-title font-bold"
+      >
+        Visita nuestros
+      </h3>
+      <h2
+        class="tracking-tight font-bold my-3 text-3xl lg:text-4xl text-center text-home-100"
+      >
+        Productos destacados
+      </h2>
+    </header>
+    <div
+      class="swiper swiper_container swiper-coverflow swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress"
+    >
+      <div
+        class="swiper-wrapper"
+        style="cursor: grab; transition-duration: 0ms; transition-delay: 0ms; transform: translate3d(NaNpx, 0px, 0px);"
+      >
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="0"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="1"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="2"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="3"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="4"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="slider-controler hidden xl:block"
+      >
+        <div
+          class="swiper-button-prev slider-arrow text-title"
+        />
+        <div
+          class="swiper-button-next slider-arrow text-title"
+        />
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`Pruebas el home page > La ruta raiz debe de renderizar  1`] = `
+<DocumentFragment>
+  <section
+    class="grid grid-cols-1 place-items-center md:grid-cols-2 w-full"
+  >
+    <article
+      class="lg:max-w-lg md:max-w-sm w-[90%] space-y-3"
+    >
+      <h3
+        class="scroll-m-20 text-xl md:text-2xl tracking-tight text-home-100 font-medium"
+      >
+        Bienvenidos...
+      </h3>
+      <h1
+        class="scroll-m-20 text-3xl md:text-4xl tracking-tight lg:text-5xl font-semibold leading-snug text-title"
+      >
+        Calidez y Comodidad Para 
+        <span
+          class="text-home-100 font-bold leading-snug"
+        >
+          tus amigos peluditos
+        </span>
+      </h1>
+      <p
+        class="text-base sm:text-lg leading-tight text-title"
+      >
+        Descubra la moda ideal para su mascota, asegurándose de que esté cómoda y feliz en cualquier temporada.
+      </p>
+      <button
+        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-home-100 text-white h-10 px-4 py-2"
+      >
+        Ver Categorías
+      </button>
+    </article>
+    <figure
+      class="w-96 lg:w-[30rem] md:py-10"
+    >
+      <img
+        alt="home"
+        class="w-full h-full object-cover"
+        src="/home-image.png"
+      />
+    </figure>
+  </section>
+  <section
+    class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-[30rem_1fr] lg:px-14 place-items-center gap-4"
+  >
+    <article
+      class="xl:pr-8 flex flex-col justify-center gap-4 w-[90%] md:w-full"
+    >
+      <h2
+        class="tracking-tight lg:text-4xl font-bold text-3xl md:text-5xl leading-snug text-title"
+      >
+        Explora
+      </h2>
+      <h3
+        class="scroll-m-20 tracking-tight text-3xl md:text-4xl font-medium text-title"
+      >
+        El mundo de las mascotas y 
+        <span
+          class="text-home-100 font-semibold"
+        >
+          encuentra inspiración en nuestras categorias
+        </span>
+         
+      </h3>
+    </article>
+    <div>
+      Carousel Mock
+    </div>
+  </section>
+  <section
+    class="w-full py-20 space-y-10"
+  >
+    <header
+      class="space-y-1"
+    >
+      <h3
+        class="scroll-m-20 md:text-2xl tracking-tight text-4xl lg:text-5xl text-center text-title font-bold"
+      >
+        Visita nuestros
+      </h3>
+      <h2
+        class="tracking-tight font-bold my-3 text-3xl lg:text-4xl text-center text-home-100"
+      >
+        Productos destacados
+      </h2>
+    </header>
+    <div
+      class="swiper swiper_container swiper-coverflow swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress"
+    >
+      <div
+        class="swiper-wrapper"
+        style="cursor: grab; transition-duration: 0ms; transition-delay: 0ms; transform: translate3d(NaNpx, 0px, 0px);"
+      >
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="0"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="1"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="2"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="3"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="4"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="slider-controler hidden xl:block"
+      >
+        <div
+          class="swiper-button-prev slider-arrow text-title"
+        />
+        <div
+          class="swiper-button-next slider-arrow text-title"
+        />
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`Pruebas el home page > La ruta raiz debe de renderizar el Home y hacer match con el snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="grid grid-cols-1 place-items-center md:grid-cols-2 w-full"
+  >
+    <article
+      class="lg:max-w-lg md:max-w-sm w-[90%] space-y-3"
+    >
+      <h3
+        class="scroll-m-20 text-xl md:text-2xl tracking-tight text-home-100 font-medium"
+      >
+        Bienvenidos...
+      </h3>
+      <h1
+        class="scroll-m-20 text-3xl md:text-4xl tracking-tight lg:text-5xl font-semibold leading-snug text-title"
+      >
+        Calidez y Comodidad Para 
+        <span
+          class="text-home-100 font-bold leading-snug"
+        >
+          tus amigos peluditos
+        </span>
+      </h1>
+      <p
+        class="text-base sm:text-lg leading-tight text-title"
+      >
+        Descubra la moda ideal para su mascota, asegurándose de que esté cómoda y feliz en cualquier temporada.
+      </p>
+      <button
+        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-home-100 text-white h-10 px-4 py-2"
+      >
+        Ver Categorías
+      </button>
+    </article>
+    <figure
+      class="w-96 lg:w-[30rem] md:py-10"
+    >
+      <img
+        alt="home"
+        class="w-full h-full object-cover"
+        src="/home-image.png"
+      />
+    </figure>
+  </section>
+  <section
+    class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-[30rem_1fr] lg:px-14 place-items-center gap-4"
+  >
+    <article
+      class="xl:pr-8 flex flex-col justify-center gap-4 w-[90%] md:w-full"
+    >
+      <h2
+        class="tracking-tight lg:text-4xl font-bold text-3xl md:text-5xl leading-snug text-title"
+      >
+        Explora
+      </h2>
+      <h3
+        class="scroll-m-20 tracking-tight text-3xl md:text-4xl font-medium text-title"
+      >
+        El mundo de las mascotas y 
+        <span
+          class="text-home-100 font-semibold"
+        >
+          encuentra inspiración en nuestras categorias
+        </span>
+         
+      </h3>
+    </article>
+    <div>
+      Carousel Mock
+    </div>
+  </section>
+  <section
+    class="w-full py-20 space-y-10"
+  >
+    <header
+      class="space-y-1"
+    >
+      <h3
+        class="scroll-m-20 md:text-2xl tracking-tight text-4xl lg:text-5xl text-center text-title font-bold"
+      >
+        Visita nuestros
+      </h3>
+      <h2
+        class="tracking-tight font-bold my-3 text-3xl lg:text-4xl text-center text-home-100"
+      >
+        Productos destacados
+      </h2>
+    </header>
+    <div
+      class="swiper swiper_container swiper-coverflow swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress"
+    >
+      <div
+        class="swiper-wrapper"
+        style="cursor: grab; transition-duration: 0ms; transition-delay: 0ms; transform: translate3d(NaNpx, 0px, 0px);"
+      >
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="0"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="1"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="2"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="3"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="4"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="slider-controler hidden xl:block"
+      >
+        <div
+          class="swiper-button-prev slider-arrow text-title"
+        />
+        <div
+          class="swiper-button-next slider-arrow text-title"
+        />
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`Pruebas el home page > La ruta raiz debe de renderizar y  1`] = `
+<DocumentFragment>
+  <section
+    class="grid grid-cols-1 place-items-center md:grid-cols-2 w-full"
+  >
+    <article
+      class="lg:max-w-lg md:max-w-sm w-[90%] space-y-3"
+    >
+      <h3
+        class="scroll-m-20 text-xl md:text-2xl tracking-tight text-home-100 font-medium"
+      >
+        Bienvenidos...
+      </h3>
+      <h1
+        class="scroll-m-20 text-3xl md:text-4xl tracking-tight lg:text-5xl font-semibold leading-snug text-title"
+      >
+        Calidez y Comodidad Para 
+        <span
+          class="text-home-100 font-bold leading-snug"
+        >
+          tus amigos peluditos
+        </span>
+      </h1>
+      <p
+        class="text-base sm:text-lg leading-tight text-title"
+      >
+        Descubra la moda ideal para su mascota, asegurándose de que esté cómoda y feliz en cualquier temporada.
+      </p>
+      <button
+        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-home-100 text-white h-10 px-4 py-2"
+      >
+        Ver Categorías
+      </button>
+    </article>
+    <figure
+      class="w-96 lg:w-[30rem] md:py-10"
+    >
+      <img
+        alt="home"
+        class="w-full h-full object-cover"
+        src="/home-image.png"
+      />
+    </figure>
+  </section>
+  <section
+    class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-[30rem_1fr] lg:px-14 place-items-center gap-4"
+  >
+    <article
+      class="xl:pr-8 flex flex-col justify-center gap-4 w-[90%] md:w-full"
+    >
+      <h2
+        class="tracking-tight lg:text-4xl font-bold text-3xl md:text-5xl leading-snug text-title"
+      >
+        Explora
+      </h2>
+      <h3
+        class="scroll-m-20 tracking-tight text-3xl md:text-4xl font-medium text-title"
+      >
+        El mundo de las mascotas y 
+        <span
+          class="text-home-100 font-semibold"
+        >
+          encuentra inspiración en nuestras categorias
+        </span>
+         
+      </h3>
+    </article>
+    <div>
+      Carousel Mock
+    </div>
+  </section>
+  <section
+    class="w-full py-20 space-y-10"
+  >
+    <header
+      class="space-y-1"
+    >
+      <h3
+        class="scroll-m-20 md:text-2xl tracking-tight text-4xl lg:text-5xl text-center text-title font-bold"
+      >
+        Visita nuestros
+      </h3>
+      <h2
+        class="tracking-tight font-bold my-3 text-3xl lg:text-4xl text-center text-home-100"
+      >
+        Productos destacados
+      </h2>
+    </header>
+    <div
+      class="swiper swiper_container swiper-coverflow swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress"
+    >
+      <div
+        class="swiper-wrapper"
+        style="cursor: grab; transition-duration: 0ms; transition-delay: 0ms; transform: translate3d(NaNpx, 0px, 0px);"
+      >
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="0"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="1"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="2"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="3"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="4"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="slider-controler hidden xl:block"
+      >
+        <div
+          class="swiper-button-prev slider-arrow text-title"
+        />
+        <div
+          class="swiper-button-next slider-arrow text-title"
+        />
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`Pruebas el home page > La ruta raiz debe renderizar el home 1`] = `
+<DocumentFragment>
+  <section
+    class="grid grid-cols-1 place-items-center md:grid-cols-2 w-full"
+  >
+    <article
+      class="lg:max-w-lg md:max-w-sm w-[90%] space-y-3"
+    >
+      <h3
+        class="scroll-m-20 text-xl md:text-2xl tracking-tight text-home-100 font-medium"
+      >
+        Bienvenidos...
+      </h3>
+      <h1
+        class="scroll-m-20 text-3xl md:text-4xl tracking-tight lg:text-5xl font-semibold leading-snug text-title"
+      >
+        Calidez y Comodidad Para 
+        <span
+          class="text-home-100 font-bold leading-snug"
+        >
+          tus amigos peluditos
+        </span>
+      </h1>
+      <p
+        class="text-base sm:text-lg leading-tight text-title"
+      >
+        Descubra la moda ideal para su mascota, asegurándose de que esté cómoda y feliz en cualquier temporada.
+      </p>
+      <button
+        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-home-100 text-white h-10 px-4 py-2"
+      >
+        Ver Categorías
+      </button>
+    </article>
+    <figure
+      class="w-96 lg:w-[30rem] md:py-10"
+    >
+      <img
+        alt="home"
+        class="w-full h-full object-cover"
+        src="/home-image.png"
+      />
+    </figure>
+  </section>
+  <section
+    class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-[30rem_1fr] lg:px-14 place-items-center gap-4"
+  >
+    <article
+      class="xl:pr-8 flex flex-col justify-center gap-4 w-[90%] md:w-full"
+    >
+      <h2
+        class="tracking-tight lg:text-4xl font-bold text-3xl md:text-5xl leading-snug text-title"
+      >
+        Explora
+      </h2>
+      <h3
+        class="scroll-m-20 tracking-tight text-3xl md:text-4xl font-medium text-title"
+      >
+        El mundo de las mascotas y 
+        <span
+          class="text-home-100 font-semibold"
+        >
+          encuentra inspiración en nuestras categorias
+        </span>
+         
+      </h3>
+    </article>
+    <div>
+      Carousel Mock
+    </div>
+  </section>
+  <section
+    class="w-full py-20 space-y-10"
+  >
+    <header
+      class="space-y-1"
+    >
+      <h3
+        class="scroll-m-20 md:text-2xl tracking-tight text-4xl lg:text-5xl text-center text-title font-bold"
+      >
+        Visita nuestros
+      </h3>
+      <h2
+        class="tracking-tight font-bold my-3 text-3xl lg:text-4xl text-center text-home-100"
+      >
+        Productos destacados
+      </h2>
+    </header>
+    <div
+      class="swiper swiper_container swiper-coverflow swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress"
+    >
+      <div
+        class="swiper-wrapper"
+        style="cursor: grab; transition-duration: 0ms; transition-delay: 0ms; transform: translate3d(NaNpx, 0px, 0px);"
+      >
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="0"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="1"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="2"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="3"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide max-w-56"
+          data-swiper-slide-index="4"
+        >
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm -z-20 bg-home-75 aspect-[7/12] relative md:min-w-32"
+            style="background-image: url(./dog1.png); background-size: contain; background-repeat: no-repeat; background-position: center;"
+          >
+            <div
+              class="-z-10 absolute"
+            >
+              <img
+                alt=""
+                class="rounded-lg"
+                src="./carousel-background.png"
+              />
+            </div>
+            <div
+              class="flex flex-col space-y-1.5 p-1 text-title"
+            >
+              <h3
+                class="font-semibold tracking-tight text-center text-xl"
+              >
+                Casual
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="slider-controler hidden xl:block"
+      >
+        <div
+          class="swiper-button-prev slider-arrow text-title"
+        />
+        <div
+          class="swiper-button-next slider-arrow text-title"
+        />
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

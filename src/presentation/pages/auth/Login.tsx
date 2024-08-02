@@ -16,13 +16,14 @@ import {
   FormLabel,
   FormMessage,
 } from "@/presentation/components/ui/form";
+
 import { Input } from "@/presentation/components/ui/input";
 import { Button } from "@/presentation/components/ui/button";
 import Google from "@/presentation/components/icons/Google";
 
 import { loginSchema } from "@/presentation/validations/userSchema";
-import { useLoginMutation } from "@/presentation/hooks";
 import { Spinner } from "@/presentation/components/ui/spinner";
+import { useLoginMutation } from "@/presentation/hooks";
 
 export const Login = () => {
   const form = useForm<z.infer<typeof loginSchema>>({
@@ -36,6 +37,7 @@ export const Login = () => {
   const { loginMutation,isLoadingLogin } = useLoginMutation();
 
   async function onSubmit(values: z.infer<typeof loginSchema>) {
+    console.log('Submit Values:', values);
     loginMutation.mutateAsync(values);
   }
 
@@ -62,6 +64,7 @@ export const Login = () => {
                 <FormControl>
                   <Input
                     placeholder="example@gmail.com"
+                    data-testid="email-input"
                     className={`border ${
                       errors.email?.message
                         ? "border-red-500"
@@ -85,6 +88,7 @@ export const Login = () => {
                   <Input
                     type="password"
                     placeholder="*****************"
+                    data-testid="password-input"
                     className={`border ${
                       errors.email?.message
                         ? "border-red-500"
@@ -107,10 +111,12 @@ export const Login = () => {
           <Button
             type="submit"
             variant="gradient"
+            data-testid="login-button"
             className="w-full flex gap-2 md:text-lg"
           >
             <Spinner
               size="small"
+              data-testid="login-spinner"
               show={isLoadingLogin}
               className="text-slate-300"
             />

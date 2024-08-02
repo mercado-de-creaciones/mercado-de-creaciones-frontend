@@ -10,10 +10,6 @@ import '/src/app.css';
 
 const queryClientProvider = new QueryClient();
 
-
-
-
-
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClientProvider}>
