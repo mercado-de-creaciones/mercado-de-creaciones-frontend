@@ -1,6 +1,7 @@
 import { useResetPasswordMutation } from "@/presentation/hooks";
 
-import { TypographyH2, TypographyP } from "@/presentation/components/shared";
+import { TypographyH2 } from "@/presentation/components/shared/TypographyH2";
+import { TypographyP } from "@/presentation/components/shared/TypographyP";
 import { Button } from "@/presentation/components/ui/button";
 
 import {
@@ -12,13 +13,15 @@ import {
   FormMessage,
 } from "@/presentation/components/ui/form";
 import { Input } from "@/presentation/components/ui/input";
+import { Alert, AlertTitle } from "@/presentation/components/ui/alert";
+import { Spinner } from "@/presentation/components/ui/spinner";
 import { resetPasswordSchema } from "@/presentation/validations/userSchema";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { z } from "zod";
 import { AlertCircle, LucideMailCheck } from "lucide-react";
-import { Alert, AlertTitle } from "@/presentation/components/ui/alert";
 
 export const ResetPassword = () => {
   const form = useForm<z.infer<typeof resetPasswordSchema>>({
@@ -28,7 +31,8 @@ export const ResetPassword = () => {
     },
   });
 
-  const resetPasswordMutation = useResetPasswordMutation();
+  const { resetPasswordMutation, isLoadingResetPassword } =
+    useResetPasswordMutation();
 
   const onSubmit = (values: z.infer<typeof resetPasswordSchema>) => {
     resetPasswordMutation.mutate(values);
@@ -97,15 +101,24 @@ export const ResetPassword = () => {
           <Button
             type="submit"
             variant="blue"
-            className="hover:bg-[#366EFF]/90"
+            className="hover:bg-[#366EFF]/90 w-full flex items-center gap-2 md:text-lg"
+            disabled={resetPasswordMutation.isSuccess}
           >
-            Recuperar
+            <Spinner
+              size="small"
+              show={isLoadingResetPassword}
+              className="text-slate-300"
+            />
+            {isLoadingResetPassword ? "Recuperando..." : "Recuperar"}
           </Button>
 
           <div className="flex flex-col md:flex-row gap-4 items-center">
             <TypographyP className="text-md text-balance">
               ¿Ya tienes cuenta?
-              <Link to="/auth/login" className="text-[#366EFF] ml-2 font-medium">
+              <Link
+                to="/auth/login"
+                className="text-[#366EFF] ml-2 font-medium"
+              >
                 Inicia sesion
               </Link>
             </TypographyP>

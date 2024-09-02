@@ -20,12 +20,18 @@ module.exports = {
       aspectRatio: {
         '7/12': '7 / 12',
       },
+      backgroundImage: {
+        'gradient-primary': 'linear-gradient(to right, #6993FF, #CE67FF, #FFC760)',
+        'gradient-secondary':'linear-gradient(to bottom,#5078F2,#CE67FF)'
+      },
       colors: {
         home: {
           50: "rgba(255, 245, 233, 1)",
           75: "rgba(255, 204, 141, 1)",
           100: "rgba(255, 169, 64, 1)"
         },
+        "title": "#3F3D56",
+        "light-blue": "var(--light-blue)",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

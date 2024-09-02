@@ -1,7 +1,6 @@
-import {
-  TypographyH2,
-  TypographyP,
-} from "@/presentation/components/shared";
+import { TypographyH2 } from "@/presentation/components/shared/TypographyH2";
+import { TypographyP } from "@/presentation/components/shared/TypographyP";
+
 import { useConfirmAccount } from "@/presentation/hooks";
 
 import { CheckCircle2Icon, Loader } from "lucide-react";
@@ -38,7 +37,7 @@ export const ConfirmAccount = () => {
           <TypographyP>Usuario confirmado correctamente</TypographyP>
         </div>
       )}
-      
+
       <Link
         to="/"
         type="submit"

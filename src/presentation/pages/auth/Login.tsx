@@ -1,7 +1,12 @@
-import { zodResolver } from '@hookform/resolvers/zod';
-import { Link } from 'react-router-dom';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+
+import { TypographyH2 } from "@/presentation/components/shared/TypographyH2";
+import { TypographyP } from "@/presentation/components/shared/TypographyP";
+import { Divider } from "@/presentation/components/shared/Divider";
+import { ButtonWithIcon } from "@/presentation/components/shared/ButtonWithIcon";
 
 import {
   Form,
@@ -10,29 +15,29 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/presentation/components/ui/form';
-import { ButtonWithIcon, Divider } from '@/presentation/components/shared';
-import { Input } from '@/presentation/components/ui/input';
-import { Button } from '@/presentation/components/ui/button';
-import Google from '@/presentation/components/icons/Google';
-import { TypographyH2, TypographyP } from "@/presentation/components/shared";
+} from "@/presentation/components/ui/form";
 
-import { loginSchema } from '@/presentation/validations/userSchema';
-import { useLoginMutation } from '@/presentation/hooks';
+import { Input } from "@/presentation/components/ui/input";
+import { Button } from "@/presentation/components/ui/button";
+import Google from "@/presentation/components/icons/Google";
 
+import { loginSchema } from "@/presentation/validations/userSchema";
+import { Spinner } from "@/presentation/components/ui/spinner";
+import { useLoginMutation } from "@/presentation/hooks";
 
 export const Login = () => {
   const form = useForm<z.infer<typeof loginSchema>>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
-      email: '',
-      password: '',
+      email: "",
+      password: "",
     },
   });
 
-  const { loginMutation } = useLoginMutation();
+  const { loginMutation,isLoadingLogin } = useLoginMutation();
 
-  function onSubmit(values: z.infer<typeof loginSchema>) {
+  async function onSubmit(values: z.infer<typeof loginSchema>) {
+    console.log('Submit Values:', values);
     loginMutation.mutateAsync(values);
   }
 
@@ -59,7 +64,9 @@ export const Login = () => {
                 <FormControl>
                   <Input
                     placeholder="example@gmail.com"
-                    className={`border ${errors.email?.message
+                    data-testid="email-input"
+                    className={`border ${
+                      errors.email?.message
                         ? "border-red-500"
                         : "border-blue-600"
                       }`}
@@ -81,7 +88,9 @@ export const Login = () => {
                   <Input
                     type="password"
                     placeholder="*****************"
-                    className={`border ${errors.email?.message
+                    data-testid="password-input"
+                    className={`border ${
+                      errors.email?.message
                         ? "border-red-500"
                         : "border-blue-600"
                       }`}
@@ -99,7 +108,18 @@ export const Login = () => {
             ¿Olvidaste tu contraseña?
           </Link>
 
-          <Button type="submit" variant="gradient" className="w-full">
+          <Button
+            type="submit"
+            variant="gradient"
+            data-testid="login-button"
+            className="w-full flex gap-2 md:text-lg"
+          >
+            <Spinner
+              size="small"
+              data-testid="login-spinner"
+              show={isLoadingLogin}
+              className="text-slate-300"
+            />
             Ingresar
           </Button>
 
@@ -111,7 +131,10 @@ export const Login = () => {
 
           <TypographyP className="text-md">
             ¿No tienes cuenta?
-            <Link to="/auth/registrar" className="text-[#366EFF] ml-2 font-medium">
+            <Link
+              to="/auth/registrar"
+              className="text-[#366EFF] ml-2 font-medium"
+            >
               Crea una
             </Link>
           </TypographyP>

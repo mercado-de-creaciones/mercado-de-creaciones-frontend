@@ -1,45 +1,45 @@
-import { useRegisterMutation } from '@/presentation/hooks';
+import { useRegisterMutation } from "@/presentation/hooks";
 
 import {
-	Form,
-	FormControl,
-	FormField,
-	FormItem,
-	FormLabel,
-	FormMessage,
-} from '@/presentation/components/ui/form';
-import { Input } from '@/presentation/components/ui/input';
-import { Button } from '@/presentation/components/ui/button';
-import { TypographyH2, TypographyP } from "@/presentation/components/shared";
-import { registerSchema } from '@/presentation/validations/userSchema';
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/presentation/components/ui/form";
+import { Input } from "@/presentation/components/ui/input";
+import { Button } from "@/presentation/components/ui/button";
+import { TypographyH2 } from "@/presentation/components/shared/TypographyH2";
+import { TypographyP } from "@/presentation/components/shared/TypographyP";
+import { Alert, AlertTitle } from "@/presentation/components/ui/alert";
+import { Spinner } from "@/presentation/components/ui/spinner";
+
+import { registerSchema } from "@/presentation/validations/userSchema";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { z } from "zod";
-import { MailCheck } from 'lucide-react';
-import { Alert, AlertTitle } from '@/presentation/components/ui/alert';
+import { MailCheck } from "lucide-react";
 
 export const Register = () => {
-	const form = useForm<z.infer<typeof registerSchema>>({
-		resolver: zodResolver(registerSchema),
-		defaultValues: {
-			email: '',
-			password: '',
-			name: '',
-		},
-	});
+  const form = useForm<z.infer<typeof registerSchema>>({
+    resolver: zodResolver(registerSchema),
+    defaultValues: {
+      email: "",
+      password: "",
+      name: "",
+    },
+  });
 
-	const { registerMutation } = useRegisterMutation();
+  const { registerMutation, isLoadingRegister } = useRegisterMutation();
+  
+  function onSubmit(values: z.infer<typeof registerSchema>) {
+    registerMutation.mutateAsync(values);
+  }
 
-	async function onSubmit(values: z.infer<typeof registerSchema>) {
-		const {message} = await registerMutation.mutateAsync(values);
-    if(message === "Usuario creado correctamente, revisa tu email para confirmar tu cuenta"){
-      form.reset();
-    }
-	}
-
-	return (
+  return (
     <div className="w-full p-4 sm:p-8 flex flex-col gap-4">
       <TypographyH2 className="uppercase text-center">
         Crea tu cuenta
@@ -135,8 +135,18 @@ export const Register = () => {
             ¿Olvidaste tu contraseña?
           </Link>
 
-          <Button type="submit" className="w-full" variant="gradient">
-            Registrase
+          <Button
+            type="submit"
+            className="w-full flex items-center gap-2 md:text-lg"
+            variant="gradient"
+            disabled={registerMutation.isSuccess}
+          >
+            <Spinner
+              size="small"
+              show={isLoadingRegister}
+              className="text-slate-300"
+            />
+            {isLoadingRegister ? "Creando cuenta..." : "Registrarse"}
           </Button>
 
           <TypographyP className="text-md">
