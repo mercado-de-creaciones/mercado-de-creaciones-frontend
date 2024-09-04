@@ -9,6 +9,9 @@ import { ConfirmAccount } from "../pages/auth/ConfirmAccount";
 
 import { HomeLayout } from "../layouts/HomeLayout";
 import { Home } from "../pages/home/Home";
+import { DashboardLayout } from "../layouts/DashboardLayout";
+import { Dashboard } from "../pages/dashboard/Dashboard";
+import { ProductsTable } from "../pages/dashboard/ProductsTable";
 
 const authRoutes = [
   {
@@ -32,6 +35,18 @@ const authRoutes = [
     component: <ConfirmAccount />,
   },
 ];
+
+const dashboardRoutes = [
+  {
+    to: "/dashboard/",
+    component: <Dashboard />
+  },
+  {
+    to: "/dashboard/products",
+    component: <ProductsTable />
+  },
+
+]
 
 const homeRoutes = [
   {
@@ -67,4 +82,14 @@ export const router = createBrowserRouter([
       })),
     ],
   },
+  {
+    path: "/dashboard",
+    element: <DashboardLayout />,
+    children: [
+      ...dashboardRoutes.map((route) => ({
+        path:route.to,
+        element: route.component
+      }))
+    ]
+  }
 ]);

@@ -1,7 +1,7 @@
 import { useLoginMutation, useProfile } from "@/presentation/hooks";
 
 import { buttonVariants } from "../ui/button";
-import { AvatarMenu } from "./AvatarMenu";
+import { AvatarMenu } from "../shared/AvatarMenu";
 
 import { NavLink } from "react-router-dom";
 import { MenuIcon } from "lucide-react";
