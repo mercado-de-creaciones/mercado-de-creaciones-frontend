@@ -25,7 +25,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 import { Formatter } from "@/config/helpers/formatter";
-import { useToggle } from "@uidotdev/usehooks";
+import { useToggle } from "usehooks-ts";
 
 interface Props {
   user: User;
@@ -34,10 +34,10 @@ interface Props {
 }
 
 export const AvatarMenu = ({ user, isLoading, logout }: Props) => {
-  const [isOpen, toggle] = useToggle(false);
+  const [isOpen,,setValue] = useToggle(false);
 
   return (
-    <DropdownMenu open={isOpen} onOpenChange={() => toggle(!isOpen)}>
+    <DropdownMenu open={isOpen} onOpenChange={() => setValue(!isOpen)}>
       <DropdownMenuTrigger
         asChild
         className="focus-visible:ring-offset-0 focus-visible:ring-0 w-48"
