@@ -4,7 +4,7 @@ import * as UseCases from "../../../core/use-cases";
 import { apiFetcher } from "@/config/adapters/api.adapter";
 
 import { useMutation } from "@tanstack/react-query";
-import { useLocalStorage } from "@uidotdev/usehooks";
+import { useLocalStorage } from "usehooks-ts";
 import { useNavigate } from "react-router-dom";
 
 export const useLoginMutation = () => {
